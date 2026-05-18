@@ -2,9 +2,8 @@ const express = require('express');
 const router = express.Router();
 const riot = require('../lib/riotClient');
 const { spectator } = require("../lib/riotClient");
-
-
-
+const syncData = require("../services/syncData");
+const { sync } = require("../services/syncData");
 
 //GET /account/:gameName/:tagLine
 router.get('/account/:gameName/:tagLine', (req, res) => {
@@ -20,8 +19,7 @@ router.get('/account/:gameName/:tagLine', (req, res) => {
         const status = err.response?.status || 500;
         res.status(status).json({error: err.message});
     }
-})
-
+});
 
 //GET /spactator/:puuid
 router.get('/spectator/:puuid', async (req, res) => {
@@ -34,5 +32,15 @@ router.get('/spectator/:puuid', async (req, res) => {
         res.status(status).json({error: err.message});
     }
 });
+
+//POST /syncData
+router.post('/syncData', (req, res) => {
+    try {
+        sync().then(() => res.json({message: "Data sync completed successfully."}))
+    }catch(err) {
+        const status = err.response?.status || 500;
+        res.status(status).json({error: err.message});
+    }
+})
 
 module.exports = router;
