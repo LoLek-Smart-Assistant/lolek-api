@@ -25,14 +25,13 @@ export async function getAccount(req: Request, res: Response) {
   }
 }
 
-export async function getSpectatorById(req: Request, res: Response) {
+export async function getSpectatorByPuuid(req: Request, res: Response) {
   try {
-    const { platform, encryptedId } = req.params;
-    const data = await riot.spectator(platform, encryptedId);
+    const { platform, puuid } = req.params;
+    const data = await riot.spectator(platform, puuid);
     res.json(data);
   } catch (err: any) {
     const status = err.response?.status || 500;
     res.status(status).json({ error: err.message, details: err.response?.data || null });
   }
 }
-

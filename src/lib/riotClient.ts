@@ -48,7 +48,6 @@ export async function getSummonerByPUUID(platform: string, puuid: string) {
 export async function spectator(platform: string, encryptedSummonerId: string) {
   const base = platformBase(platform);
   const url = `${base}/lol/spectator/v5/active-games/by-summoner/${encodeURIComponent(encryptedSummonerId)}`;
-  console.log(url);
   return request(url);
 }
 
