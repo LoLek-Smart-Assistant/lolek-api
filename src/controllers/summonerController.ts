@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import riot from '../lib/riotClient';
-import { addHATEOASLinks } from '../lib/hateoas';
 
 function mapSummonerDto(summ: any) {
   if (!summ) return null;
@@ -19,8 +18,7 @@ export async function getAccount(req: Request, res: Response) {
   try {
     const { gameName, tagLine } = req.params;
     const data = await riot.getAccount(gameName, tagLine);
-    const hateoasResponse = addHATEOASLinks(data, 'account', data.puuid);
-    res.json(hateoasResponse);
+    res.json(data);
   } catch (err: any) {
     const status = err.response?.status || 500;
     res.status(status).json({ error: err.message, details: err.response?.data || null });
@@ -31,8 +29,7 @@ export async function getSpectatorByPuuid(req: Request, res: Response) {
   try {
     const { platform, puuid } = req.params;
     const data = await riot.spectator(platform, puuid);
-    const hateoasResponse = addHATEOASLinks({ ...data, platform, puuid }, 'summoner', puuid);
-    res.json(hateoasResponse);
+    res.json(data);
   } catch (err: any) {
     const status = err.response?.status || 500;
     res.status(status).json({ error: err.message, details: err.response?.data || null });
