@@ -16,6 +16,7 @@ export default async function syncChampions(version: string): Promise<void> {
   const championData = Object.values(champions.data).map((champ: any) => ({
     version,
     championId: champ.id,
+    key: champ.key,
     championName: champ.name,
     tags: champ.tags,
     image: champ.image?.full || null

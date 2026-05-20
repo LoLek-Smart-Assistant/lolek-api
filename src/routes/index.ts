@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAccount, getSpectatorByPuuid } from '../controllers/summonerController';
+import { getAccount, getLiveGameSummary, getSpectatorByPuuid } from '../controllers/summonerController';
 import { syncDataHandler } from '../controllers/syncController';
 import {logIn, logOut, signIn} from "../controllers/authController";
 import {authMiddleware} from "../middleware/authMiddleware";
@@ -20,6 +20,7 @@ router.post('/user/link-riot-profile', authMiddleware, linkRiotProfile);
 // Summoner routes (public)
 router.get('/riot-account/:gameName/:tagLine', getAccount);
 router.get('/live-game/:platform/:encryptedId', getSpectatorByPuuid);
+router.get('/live-game-summary/:platform/:gameName/:tagLine', getLiveGameSummary);
 
 // Sync route (public)
 router.post('/syncData', syncDataHandler);

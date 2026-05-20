@@ -61,6 +61,9 @@
  *         championId:
  *           type: string
  *           description: Champion ID from Riot API
+ *         key:
+ *           type: string
+ *           description: Champion numeric key from Riot API
  *         championName:
  *           type: string
  *           description: Champion name
@@ -154,6 +157,36 @@
  *           description: JWT refresh token
  *         user:
  *           $ref: '#/components/schemas/User'
+ *     LiveGameTeamMember:
+ *       type: object
+ *       properties:
+ *         summonerName:
+ *           type: string
+ *           nullable: true
+ *         champion:
+ *           $ref: '#/components/schemas/Champion'
+ *           nullable: true
+ *     LiveGameSummaryResponse:
+ *       type: object
+ *       properties:
+ *         myTeam:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/LiveGameTeamMember'
+ *         enemyTeam:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/LiveGameTeamMember'
+ *         allChamps:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/Champion'
+ *         gameDuration:
+ *           type: integer
+ *           nullable: true
+ *         startTime:
+ *           type: integer
+ *           nullable: true
  *
  * /authentication/sign-in:
  *   post:
@@ -322,6 +355,38 @@
  *           application/json:
  *             schema:
  *               type: object
+ *
+ * /live-game-summary/{platform}/{gameName}/{tagLine}:
+ *   get:
+ *     tags:
+ *       - Summoner
+ *     summary: Get live game summary with team split and champions
+ *     parameters:
+ *       - name: platform
+ *         in: path
+ *         required: true
+ *         description: Platform (e.g., NA1, EUW1)
+ *         schema:
+ *           type: string
+ *       - name: gameName
+ *         in: path
+ *         required: true
+ *         description: Summoner game name
+ *         schema:
+ *           type: string
+ *       - name: tagLine
+ *         in: path
+ *         required: true
+ *         description: Summoner tag line
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Live game summary data
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/LiveGameSummaryResponse'
  *
  * /syncData:
  *   post:

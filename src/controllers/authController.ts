@@ -16,7 +16,7 @@ export async function signIn(req: Request, res: Response) {
         const result = await signup(username || email.split('@')[0], email, password);
         
         // Set httpOnly cookies
-        res.cookie('token', result.token, COOKIE_OPTIONS);
+        res.cookie('token', result.accessToken, COOKIE_OPTIONS);
         res.cookie('refreshToken', result.refreshToken, COOKIE_OPTIONS);
         
         res.json(result);
@@ -33,7 +33,7 @@ export async function logIn(req: Request, res: Response) {
         const result = await login(email, password);
         
         // Set httpOnly cookies
-        res.cookie('token', result.token, COOKIE_OPTIONS);
+        res.cookie('token', result.accessToken, COOKIE_OPTIONS);
         res.cookie('refreshToken', result.refreshToken, COOKIE_OPTIONS);
         
         res.json(result);
