@@ -1,13 +1,11 @@
 import express from 'express';
 import logger from 'morgan';
 import swaggerUi from 'swagger-ui-express';
-import swaggerOutput from './swagger-output.json';
 import dotenv from 'dotenv';
-
-dotenv.config();
-
 import { swaggerSpec } from './swagger';
 import indexRouter from './routes/index';
+
+dotenv.config();
 
 const app = express();
 
@@ -15,7 +13,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerOutput));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use('/', indexRouter);
 

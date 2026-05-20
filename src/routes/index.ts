@@ -17,7 +17,7 @@ router.get('/user/profile', authMiddleware, getProfile);
 router.get('/user/riot-profile', authMiddleware, getRiotProfile);
 router.post('/user/link-riot-profile', authMiddleware, linkRiotProfile);
 
-// Summoner routes(public)
+// Summoner routes (public)
 router.get('/riot-account/:gameName/:tagLine', getAccount);
 router.get('/live-game/:platform/:encryptedId', getSpectatorByPuuid);
 
