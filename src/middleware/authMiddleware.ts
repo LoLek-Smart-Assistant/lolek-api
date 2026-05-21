@@ -2,13 +2,8 @@ import { Request, Response, NextFunction } from 'express';
 import { verifyAccessToken } from '../lib/jwtHelper';
 
 export function authMiddleware(req: Request, res: Response, next: NextFunction) {
-    // Try to get token from Authorization header first, then from cookies
-    let token = req.headers.authorization?.split(' ')[1];
-    
-    if (!token) {
-        token = (req.cookies as any)?.token;
-    }
-    
+    const token = (req.cookies as any)?.['lolek-token'];
+
     if (!token) return res.status(401).json({ error: 'No token provided.' });
 
     const payload = verifyAccessToken(token);

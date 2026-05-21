@@ -149,12 +149,6 @@
  *     AuthResponse:
  *       type: object
  *       properties:
- *         token:
- *           type: string
- *           description: JWT access token
- *         refreshToken:
- *           type: string
- *           description: JWT refresh token
  *         user:
  *           $ref: '#/components/schemas/User'
  *     LiveGameTeamMember:
@@ -235,21 +229,15 @@
  *     tags:
  *       - Authentication
  *     summary: Logout current user
- *     security:
- *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: Logout successful
- *       401:
- *         description: Unauthorized
  *
  * /user/profile:
  *   get:
  *     tags:
  *       - User
  *     summary: Get current user profile
- *     security:
- *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: User profile
@@ -267,8 +255,6 @@
  *     tags:
  *       - User
  *     summary: Get Riot profile data for linked account
- *     security:
- *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: Riot profile data
@@ -286,8 +272,6 @@
  *     tags:
  *       - User
  *     summary: Link Riot account to user profile
- *     security:
- *       - bearerAuth: []
  *     requestBody:
  *       required: true
  *       content:

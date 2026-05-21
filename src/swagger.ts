@@ -6,7 +6,7 @@ const options = {
         info: {
             title: 'LoLek API',
             version: '1.0.0',
-            description: 'Riot API wrapper with authentication and user profiles'
+            description: 'Riot API wrapper with authentication and user profiles. Auth uses httpOnly cookies; no manual token input is required.'
         },
         servers: [
             {
@@ -14,15 +14,7 @@ const options = {
                 description: 'Development server'
             }
         ],
-        components: {
-            securitySchemes: {
-                bearerAuth: {
-                    type: 'http',
-                    scheme: 'bearer',
-                    bearerFormat: 'JWT'
-                }
-            }
-        }
+        components: {}
     },
     apis: ['./src/swagger-routes.ts']
 };

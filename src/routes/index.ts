@@ -10,7 +10,7 @@ const router = Router();
 // Auth routes (public)
 router.post('/authentication/sign-in', signIn);
 router.post('/authentication/log-in', logIn);
-router.post('/authentication/log-out', authMiddleware, logOut);
+router.post('/authentication/log-out', logOut);
 
 // User routes (protected)
 router.get('/user/profile', authMiddleware, getProfile);
