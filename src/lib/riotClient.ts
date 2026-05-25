@@ -39,6 +39,12 @@ export async function getAccount(gameName: string, tagLine: string, region = 'eu
   return request(url);
 }
 
+export async function getAccountByPUUID(puuid: string, region = 'europe') {
+  const base = regionalBase[region] || regionalBase.europe;
+  const url = `${base}/riot/account/v1/accounts/by-puuid/${encodeURIComponent(puuid)}`;
+  return request(url);
+}
+
 export async function getSummonerByPUUID(platform: string, puuid: string) {
   const base = platformBase(platform);
   const url = `${base}/lol/summoner/v4/summoners/by-puuid/${encodeURIComponent(puuid)}`;
@@ -51,5 +57,5 @@ export async function spectator(platform: string, encryptedSummonerId: string) {
   return request(url);
 }
 
-export default { getAccount, getSummonerByPUUID, spectator };
+export default { getAccount, getAccountByPUUID, getSummonerByPUUID, spectator };
 
