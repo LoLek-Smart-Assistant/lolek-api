@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node dist/bin/www.js",
     "build": "tsc",
-    "dev": "ts-node-dev --respawn --transpile-only src/bin/www.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/bin/www.ts",
+    "download:champion-images": "ts-node src/bin/downloadChampionImages.ts"
   },
   "devDependencies": {
     "@tsoa/cli": "^7.0.0-alpha.0",

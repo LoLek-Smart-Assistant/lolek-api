@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import swaggerUi from 'swagger-ui-express';
 import dotenv from 'dotenv';
+import path from 'path';
 import { swaggerSpec } from './swagger';
 import indexRouter from './routes/index';
 
@@ -24,6 +25,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use('/assets', express.static(path.join(process.cwd(), 'public')));
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 

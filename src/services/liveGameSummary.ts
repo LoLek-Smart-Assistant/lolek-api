@@ -9,6 +9,7 @@ export interface LiveGameParticipantSummary {
   summonerName: string | null;
   championName: string | null;
   championKey: string | null;
+  championImage: string | null;
   win: boolean | null;
 }
 
@@ -102,7 +103,12 @@ function getLiveParticipantName(participant: any): string | null {
     : null;
 }
 
-function mapParticipant(participant: any, championKey: string | null, championName: string | null): LiveGameParticipantSummary {
+function mapParticipant(
+  participant: any,
+  championKey: string | null,
+  championName: string | null,
+  championImage: string | null
+): LiveGameParticipantSummary {
   const teamId = toNumber(participant?.teamId);
 
   return {
@@ -111,6 +117,7 @@ function mapParticipant(participant: any, championKey: string | null, championNa
     summonerName: getLiveParticipantName(participant),
     championName,
     championKey,
+    championImage,
     win: typeof participant?.win === 'boolean' ? participant.win : null,
   };
 }
@@ -163,16 +170,27 @@ export async function buildLiveGameSummary(input: LiveGameSummaryInput): Promise
     playerSummonerName = await getCachedAccountNameByPuuid(puuid, region);
   }
 
-  const champions = await Champion.find().select('championName championId key').lean();
+  const champions = await Champion.find().select('championName championId key image').lean();
 
   const championNameByKey = new Map<string, string>();
-  for (const champ of champions as Array<{ championName?: string; championId?: string; key?: string }>) {
+  const championImageByKey = new Map<string, string>();
+  for (const champ of champions as Array<{ championName?: string; championId?: string; key?: string; image?: string }>) {
     const key = typeof champ.key === 'string' ? champ.key.trim() : '';
     const name = typeof champ.championName === 'string' ? champ.championName.trim() : '';
+    const image = typeof champ.image === 'string' ? champ.image.trim() : '';
     if (!key || !name) continue;
+
     championNameByKey.set(key, name);
+    if (image) {
+      championImageByKey.set(key, image);
+    }
+
     if (typeof champ.championId === 'string' && champ.championId.trim()) {
-      championNameByKey.set(champ.championId.trim(), name);
+      const championId = champ.championId.trim();
+      championNameByKey.set(championId, name);
+      if (image) {
+        championImageByKey.set(championId, image);
+      }
     }
   }
 
@@ -181,7 +199,8 @@ export async function buildLiveGameSummary(input: LiveGameSummaryInput): Promise
       ? String(participant.championId).trim() || null
       : null;
     const championName = championKey ? (championNameByKey.get(championKey) ?? null) : null;
-    const mappedParticipant = mapParticipant(participant, championKey, championName);
+    const championImage = championKey ? (championImageByKey.get(championKey) ?? null) : null;
+    const mappedParticipant = mapParticipant(participant, championKey, championName, championImage);
     if (mappedParticipant.puuid && !mappedParticipant.summonerName) {
       mappedParticipant.summonerName = accountNameByPuuid.get(mappedParticipant.puuid) ?? null;
     }
