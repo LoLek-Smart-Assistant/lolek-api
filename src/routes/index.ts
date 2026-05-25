@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { getAccount, getLiveGameSummary, getSpectatorByPuuid } from '../controllers/summonerController';
 import { syncDataHandler } from '../controllers/syncController';
-import {logIn, logOut, signIn} from "../controllers/authController";
+import {logIn, logOut, refresh, signIn} from "../controllers/authController";
 import {authMiddleware} from "../middleware/authMiddleware";
 import {getProfile, getRiotProfile, linkRiotProfile} from "../controllers/userController";
 
@@ -10,6 +10,7 @@ const router = Router();
 // Auth routes (public)
 router.post('/authentication/sign-in', signIn);
 router.post('/authentication/log-in', logIn);
+router.post('/authentication/refresh', refresh);
 router.post('/authentication/log-out', logOut);
 
 // User routes (protected)

@@ -36,6 +36,10 @@ export async function logout(userId: string) {
     await User.updateOne({ _id: userId }, { refreshToken: null });
 }
 
+export async function getUserById(userId: string) {
+    return User.findById(userId);
+}
+
 export async function getUserProfile(userId: string) {
     return User.findById(userId).select('-password -refreshToken');
 }
