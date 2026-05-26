@@ -233,6 +233,21 @@
  *       200:
  *         description: Logout successful
  *
+ * /authentication/refresh:
+ *   post:
+ *     tags:
+ *       - Authentication
+ *     summary: Refresh access token using refresh cookie
+ *     responses:
+ *       200:
+ *         description: Access token refreshed
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/AuthResponse'
+ *       401:
+ *         description: Invalid or missing refresh token
+ *
  * /user/profile:
  *   get:
  *     tags:
@@ -314,7 +329,7 @@
  *             schema:
  *               type: object
  *
- * /live-game/{platform}/{encryptedId}:
+ * /live-game/{platform}/{puuid}:
  *   get:
  *     tags:
  *       - Summoner
@@ -326,10 +341,10 @@
  *         description: Platform (e.g., NA1, EUW1)
  *         schema:
  *           type: string
- *       - name: encryptedId
+ *       - name: puuid
  *         in: path
  *         required: true
- *         description: Encrypted summoner ID
+ *         description: Player puuid
  *         schema:
  *           type: string
  *     responses:
@@ -339,38 +354,6 @@
  *           application/json:
  *             schema:
  *               type: object
- *
- * /live-game-summary/{platform}/{gameName}/{tagLine}:
- *   get:
- *     tags:
- *       - Summoner
- *     summary: Get live game summary with team split and champions
- *     parameters:
- *       - name: platform
- *         in: path
- *         required: true
- *         description: Platform (e.g., NA1, EUW1)
- *         schema:
- *           type: string
- *       - name: gameName
- *         in: path
- *         required: true
- *         description: Summoner game name
- *         schema:
- *           type: string
- *       - name: tagLine
- *         in: path
- *         required: true
- *         description: Summoner tag line
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: Live game summary data
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/LiveGameSummaryResponse'
  *
  * /syncData:
  *   post:
