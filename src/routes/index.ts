@@ -5,6 +5,7 @@ import { syncDataHandler } from '../controllers/syncController';
 import {logIn, logOut, refresh, signIn} from "../controllers/authController";
 import {authMiddleware} from "../middleware/authMiddleware";
 import {getProfile, getRiotProfile, linkRiotProfile} from "../controllers/userController";
+import { transcribeVoice, voiceUploadMiddleware } from '../controllers/voiceController';
 
 const router = Router();
 
@@ -24,6 +25,9 @@ router.get('/riot-account/:gameName/:tagLine', getAccount);
 router.get('/live-game/:platform/:puuid', getSpectatorByPuuid);
 // Items
 router.get('/items', getItems);
+
+// Voice transcription
+router.post('/voice/transcribe', voiceUploadMiddleware, transcribeVoice);
 
 // live-game-summary is now a WebSocket endpoint at /live-game-summary
 
