@@ -4,11 +4,10 @@ import os
 import tempfile
 from pathlib import Path
 
+import logging
+
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from faster_whisper import WhisperModel
-import logging
-import os
-import traceback
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
 
@@ -55,10 +54,19 @@ def get_model() -> WhisperModel:
     return _model
 
 
+def apply_background_noise_filter(input_path: str) -> str:
+    # No background filtering applied. The uploaded audio will be passed
+    # directly to the transcription model.
+    return input_path
+
+
 @app.post('/transcribe')
 async def transcribe(file: UploadFile = File(...)) -> dict[str, str]:
+    global _model
+
     suffix = Path(file.filename or '').suffix or '.audio'
     temp_path = None
+    filtered_path = None
 
     try:
         with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temp_file:
@@ -90,14 +98,19 @@ async def transcribe(file: UploadFile = File(...)) -> dict[str, str]:
         text = ' '.join(segment.text.strip() for segment in segments).strip()
         # Log the recognized transcript for debugging/visibility
         logging.info(f"Transcribed: {text}")
+
         return {'text': text}
     except Exception as exc:  # pragma: no cover - service level guard
         # Log full traceback to help diagnose 500 responses from clients
         logging.exception("Transcription failed")
         raise HTTPException(status_code=500, detail=str(exc)) from exc
     finally:
-        if temp_path and os.path.exists(temp_path):
-            os.remove(temp_path)
+
+        try:
+            if temp_path and os.path.exists(temp_path):
+                os.remove(temp_path)
+        except Exception:
+            pass
 
 
 if __name__ == '__main__':

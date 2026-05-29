@@ -9,6 +9,8 @@
  *     description: League of Legends summoner information
  *   - name: Sync
  *     description: Data synchronization endpoints
+ *   - name: Voice
+ *     description: Voice transcription and League terminology parsing
  * components:
  *   schemas:
  *     User:
@@ -181,6 +183,80 @@
  *         startTime:
  *           type: integer
  *           nullable: true
+ *     VoiceIntent:
+ *       type: string
+ *       enum:
+ *         - enemy_build_update
+ *         - recommendation_request
+ *     ParsedVoiceCommand:
+ *       type: object
+ *       properties:
+ *         intent:
+ *           $ref: '#/components/schemas/VoiceIntent'
+ *         champion:
+ *           type: string
+ *           nullable: true
+ *           description: Champion name if one was detected in the transcript
+ *         items:
+ *           type: array
+ *           nullable: true
+ *           description: Parsed item names found in the transcript
+ *           items:
+ *             type: string
+ *       required:
+ *         - intent
+ *     VoiceTranscribeRequest:
+ *       oneOf:
+ *         - type: object
+ *           properties:
+ *             audio:
+ *               type: string
+ *               format: binary
+ *               description: Uploaded audio file (preferred field name)
+ *           required:
+ *             - audio
+ *         - type: object
+ *           properties:
+ *             file:
+ *               type: string
+ *               format: binary
+ *               description: Alternate uploaded audio file field name
+ *           required:
+ *             - file
+ *         - type: object
+ *           properties:
+ *             voice:
+ *               type: string
+ *               format: binary
+ *               description: Alternate uploaded audio file field name
+ *           required:
+ *             - voice
+ *         - type: object
+ *           properties:
+ *             blob:
+ *               type: string
+ *               format: binary
+ *               description: Alternate uploaded audio file field name
+ *           required:
+ *             - blob
+ *       description: Multipart upload containing one audio file. Accepted field names are audio, file, voice, and blob.
+ *     VoiceTranscribeResponse:
+ *       type: object
+ *       properties:
+ *         transcript:
+ *           type: string
+ *           description: Normalized transcript returned by the Whisper pipeline
+ *         parsed:
+ *           $ref: '#/components/schemas/ParsedVoiceCommand'
+ *       required:
+ *         - transcript
+ *         - parsed
+ *     VoiceErrorResponse:
+ *       type: object
+ *       properties:
+ *         error:
+ *           type: string
+ *           description: Human-readable error message
  *
  * /authentication/sign-in:
  *   post:
@@ -363,5 +439,51 @@
  *     responses:
  *       200:
  *         description: Sync completed successfully
+ *
+ * /voice/transcribe:
+ *   post:
+ *     tags:
+ *       - Voice
+ *     summary: Transcribe uploaded audio and parse League of Legends terminology
+ *     description: Accepts multipart/form-data with one audio file. Supported file fields are audio, file, voice, and blob.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             $ref: '#/components/schemas/VoiceTranscribeRequest'
+ *     responses:
+ *       200:
+ *         description: Transcript normalized and parsed successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/VoiceTranscribeResponse'
+ *             example:
+ *               transcript: Sion built Thornmail and Heartsteel
+ *               parsed:
+ *                 intent: enemy_build_update
+ *                 champion: Sion
+ *                 items:
+ *                   - Thornmail
+ *                   - Heartsteel
+ *       400:
+ *         description: Missing or invalid audio upload
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/VoiceErrorResponse'
+ *       503:
+ *         description: Whisper service unavailable
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/VoiceErrorResponse'
+ *       500:
+ *         description: Failed to transcribe or parse audio
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/VoiceErrorResponse'
  */
 export {};

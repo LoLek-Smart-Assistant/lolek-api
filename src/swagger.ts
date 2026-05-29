@@ -6,7 +6,7 @@ const options = {
         info: {
             title: 'LoLek API',
             version: '1.0.0',
-            description: 'Riot API wrapper with authentication and user profiles. Auth uses httpOnly cookies; no manual token input is required.'
+            description: 'Riot API wrapper with authentication, user profiles, and a voice transcription pipeline for League of Legends terminology. Auth uses httpOnly cookies; no manual token input is required.'
         },
         servers: [
             {
