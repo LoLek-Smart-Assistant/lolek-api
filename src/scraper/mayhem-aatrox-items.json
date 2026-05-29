@@ -1,0 +1,38 @@
+{
+  "version": "Patch 26.11",
+  "champion": "aatrox",
+  "sourceUrl": "https://www.metasrc.com/lol/mayhem/build/aatrox",
+  "scrapedAt": "2026-05-28T14:53:05.041Z",
+  "coreItems": [
+    {
+      "itemId": 6610,
+      "slot": 1
+    },
+    {
+      "itemId": 3111,
+      "slot": 2
+    },
+    {
+      "itemId": 6692,
+      "slot": 3
+    }
+  ],
+  "slot4Items": [
+    6333,
+    3053,
+    3065,
+    3161
+  ],
+  "slot5Items": [
+    3161,
+    3065,
+    3053,
+    3156
+  ],
+  "slot6Items": [
+    3065,
+    3071,
+    3053,
+    6697
+  ]
+}

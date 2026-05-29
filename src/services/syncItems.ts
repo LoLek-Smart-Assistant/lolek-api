@@ -7,21 +7,26 @@ export default async function syncItems(version: string): Promise<void> {
   const items = await response.json();
   if (!items.data) throw new Error('Invalid item JSON: missing data field');
 
-  const existingCount = await Item.countDocuments({ version });
-  if (existingCount > 0) {
-    console.log(`Items for version ${version} already in DB (${existingCount} records). Skipping sync.`);
-    return;
-  }
-
-  const itemData = Object.values(items.data).map((item: any) => ({
+  const itemData = Object.entries(items.data).map(([itemId, item]: [string, any]) => ({
     version,
-    itemId: item.id,
+    itemId,
     itemName: item.name,
     tags: item.tags,
-    image: item.image?.full || null
+    image: `/assets/items/${version}/${itemId}.png`
   }));
 
-  await Item.insertMany(itemData);
-  console.log('Item sync successfully.');
+  const ops = itemData.map((doc) => ({
+    updateOne: {
+      filter: { version: doc.version, itemId: doc.itemId },
+      update: { $set: doc },
+      upsert: true
+    }
+  }));
+
+  const result = await Item.bulkWrite(ops, { ordered: false });
+  console.log(
+    `Item sync complete. Matched: ${result.matchedCount ?? 0}, ` +
+      `Upserted: ${result.upsertedCount ?? 0}, Modified: ${result.modifiedCount ?? 0}.`
+  );
 }
 

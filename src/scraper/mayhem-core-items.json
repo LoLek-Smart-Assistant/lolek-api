@@ -1,0 +1,6186 @@
+{
+  "version": "Patch 26.11",
+  "sourceUrl": "https://www.metasrc.com/lol/mayhem",
+  "scrapedAt": "2026-05-28T15:06:50.233Z",
+  "champions": [
+    {
+      "name": "Aatrox",
+      "id": "aatrox",
+      "coreItems": [
+        {
+          "itemId": 6610,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6692,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3053,
+        3065,
+        3161
+      ],
+      "slot5Items": [
+        3161,
+        3065,
+        3053,
+        3156
+      ],
+      "slot6Items": [
+        3065,
+        3071,
+        3053,
+        6697
+      ]
+    },
+    {
+      "name": "Ahri",
+      "id": "ahri",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        3157,
+        3137
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        3157,
+        3165
+      ],
+      "slot6Items": [
+        3102,
+        3157,
+        3135,
+        3118
+      ]
+    },
+    {
+      "name": "Akali",
+      "id": "akali",
+      "coreItems": [
+        {
+          "itemId": 3146,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4645,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3157,
+        4646,
+        3089,
+        3135
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        4646,
+        3102
+      ],
+      "slot6Items": [
+        3100,
+        3135,
+        2502,
+        3102
+      ]
+    },
+    {
+      "name": "Akshan",
+      "id": "akshan",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 6676,
+          "slot": 2
+        },
+        {
+          "itemId": 3153,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3036,
+        3033,
+        6672
+      ],
+      "slot5Items": [
+        3036,
+        3072,
+        6673,
+        3094
+      ],
+      "slot6Items": [
+        6673,
+        3094,
+        3072,
+        6672
+      ]
+    },
+    {
+      "name": "Alistar",
+      "id": "alistar",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3047,
+          "slot": 2
+        },
+        {
+          "itemId": 3075,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3119,
+        3083,
+        3065,
+        3143
+      ],
+      "slot5Items": [
+        3083,
+        3065,
+        6665,
+        2525
+      ],
+      "slot6Items": [
+        3065,
+        3110,
+        3109,
+        6665
+      ]
+    },
+    {
+      "name": "Ambessa",
+      "id": "ambessa",
+      "coreItems": [
+        {
+          "itemId": 6692,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3161,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3071,
+        2517,
+        3053
+      ],
+      "slot5Items": [
+        3071,
+        3156,
+        3143,
+        6697
+      ],
+      "slot6Items": [
+        2517,
+        3053,
+        6610,
+        3075
+      ]
+    },
+    {
+      "name": "Amumu",
+      "id": "amumu",
+      "coreItems": [
+        {
+          "itemId": 3068,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 8020,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        3119,
+        2502,
+        3083
+      ],
+      "slot5Items": [
+        3119,
+        3083,
+        2504,
+        2502
+      ],
+      "slot6Items": [
+        3083,
+        2504,
+        3742,
+        6653
+      ]
+    },
+    {
+      "name": "Anivia",
+      "id": "anivia",
+      "coreItems": [
+        {
+          "itemId": 6657,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3003,
+        3116,
+        3165,
+        4645
+      ],
+      "slot5Items": [
+        3135,
+        3157,
+        3089,
+        3165
+      ],
+      "slot6Items": [
+        3157,
+        3165,
+        3118,
+        3089
+      ]
+    },
+    {
+      "name": "Annie",
+      "id": "annie",
+      "coreItems": [
+        {
+          "itemId": 3118,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3157,
+        3116,
+        3089
+      ],
+      "slot5Items": [
+        3157,
+        3089,
+        3135,
+        6655
+      ],
+      "slot6Items": [
+        6653,
+        3089,
+        3116,
+        3165
+      ]
+    },
+    {
+      "name": "Aphelios",
+      "id": "aphelios",
+      "coreItems": [
+        {
+          "itemId": 6676,
+          "slot": 1
+        },
+        {
+          "itemId": 3006,
+          "slot": 2
+        },
+        {
+          "itemId": 3031,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3036,
+        3085,
+        3033,
+        3072
+      ],
+      "slot5Items": [
+        3072,
+        3033,
+        6673,
+        3085
+      ],
+      "slot6Items": [
+        6673,
+        3153,
+        3139,
+        3085
+      ]
+    },
+    {
+      "name": "Ashe",
+      "id": "ashe",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 3032,
+          "slot": 2
+        },
+        {
+          "itemId": 3085,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3153,
+        3036,
+        6672
+      ],
+      "slot5Items": [
+        3036,
+        3046,
+        3033,
+        3153
+      ],
+      "slot6Items": [
+        3072,
+        3153,
+        4646,
+        3139
+      ]
+    },
+    {
+      "name": "Aurelion Sol",
+      "id": "aurelion-sol",
+      "coreItems": [
+        {
+          "itemId": 2503,
+          "slot": 1
+        },
+        {
+          "itemId": 3116,
+          "slot": 2
+        },
+        {
+          "itemId": 3020,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6653,
+        4645,
+        3003,
+        8010
+      ],
+      "slot5Items": [
+        3003,
+        8010,
+        4645,
+        3089
+      ],
+      "slot6Items": [
+        3165,
+        3089,
+        8010,
+        4645
+      ]
+    },
+    {
+      "name": "Aurora",
+      "id": "aurora",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        3157,
+        3135
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        3157,
+        3165
+      ],
+      "slot6Items": [
+        3157,
+        3135,
+        3102,
+        3165
+      ]
+    },
+    {
+      "name": "Azir",
+      "id": "azir",
+      "coreItems": [
+        {
+          "itemId": 3115,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3116,
+        3157,
+        3089
+      ],
+      "slot5Items": [
+        3157,
+        3089,
+        3116,
+        3135
+      ],
+      "slot6Items": [
+        3089,
+        3116,
+        3135,
+        3146
+      ]
+    },
+    {
+      "name": "Bard",
+      "id": "bard",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 3100,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3094,
+        3124,
+        3153,
+        3087
+      ],
+      "slot5Items": [
+        3124,
+        3115,
+        3153,
+        4646
+      ],
+      "slot6Items": [
+        3153,
+        3091,
+        2526,
+        3115
+      ]
+    },
+    {
+      "name": "Bel'Veth",
+      "id": "belveth",
+      "coreItems": [
+        {
+          "itemId": 3111,
+          "slot": 1
+        },
+        {
+          "itemId": 6672,
+          "slot": 2
+        },
+        {
+          "itemId": 3153,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3091,
+        6333,
+        6673,
+        3065
+      ],
+      "slot5Items": [
+        3124,
+        3065,
+        6665,
+        6333
+      ],
+      "slot6Items": [
+        3072,
+        6665,
+        3078,
+        3087
+      ]
+    },
+    {
+      "name": "Blitzcrank",
+      "id": "blitzcrank",
+      "coreItems": [
+        {
+          "itemId": 3118,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3119,
+        4645,
+        3075,
+        3083
+      ],
+      "slot5Items": [
+        3089,
+        2504,
+        3083,
+        4645
+      ],
+      "slot6Items": [
+        3075,
+        3083,
+        6664,
+        6655
+      ]
+    },
+    {
+      "name": "Brand",
+      "id": "brand",
+      "coreItems": [
+        {
+          "itemId": 2503,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3116,
+        3157,
+        3165
+      ],
+      "slot5Items": [
+        3165,
+        3089,
+        3116,
+        3135
+      ],
+      "slot6Items": [
+        3089,
+        3135,
+        3003,
+        3157
+      ]
+    },
+    {
+      "name": "Braum",
+      "id": "braum",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 2502,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        3119,
+        3083,
+        2504
+      ],
+      "slot5Items": [
+        3119,
+        6665,
+        3065,
+        3190
+      ],
+      "slot6Items": [
+        3083,
+        3143
+      ]
+    },
+    {
+      "name": "Briar",
+      "id": "briar",
+      "coreItems": [
+        {
+          "itemId": 6610,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6692,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3065,
+        3053,
+        3156
+      ],
+      "slot5Items": [
+        3065,
+        2517,
+        6665,
+        3748
+      ],
+      "slot6Items": [
+        3075,
+        3156,
+        3153
+      ]
+    },
+    {
+      "name": "Caitlyn",
+      "id": "caitlyn",
+      "coreItems": [
+        {
+          "itemId": 6676,
+          "slot": 1
+        },
+        {
+          "itemId": 3006,
+          "slot": 2
+        },
+        {
+          "itemId": 3031,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3094,
+        3036,
+        2523,
+        3153
+      ],
+      "slot5Items": [
+        3036,
+        3072,
+        3033,
+        3153
+      ],
+      "slot6Items": [
+        3072,
+        3153,
+        2523,
+        3033
+      ]
+    },
+    {
+      "name": "Camille",
+      "id": "camille",
+      "coreItems": [
+        {
+          "itemId": 3078,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6610,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3053,
+        3074,
+        3065
+      ],
+      "slot5Items": [
+        3053,
+        3074,
+        6631,
+        6665
+      ],
+      "slot6Items": [
+        3065,
+        3156,
+        3071
+      ]
+    },
+    {
+      "name": "Cassiopeia",
+      "id": "cassiopeia",
+      "coreItems": [
+        {
+          "itemId": 6657,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3003,
+        3116,
+        3135,
+        3165
+      ],
+      "slot5Items": [
+        3089,
+        3165,
+        4645,
+        3116
+      ],
+      "slot6Items": [
+        3157,
+        3165,
+        8010,
+        3135
+      ]
+    },
+    {
+      "name": "Cho'Gath",
+      "id": "chogath",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3083,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        2502,
+        2504,
+        3119
+      ],
+      "slot5Items": [
+        2504,
+        6665,
+        3119,
+        3110
+      ],
+      "slot6Items": [
+        3119,
+        6665,
+        2502,
+        3110
+      ]
+    },
+    {
+      "name": "Corki",
+      "id": "corki",
+      "coreItems": [
+        {
+          "itemId": 3078,
+          "slot": 1
+        },
+        {
+          "itemId": 6676,
+          "slot": 2
+        },
+        {
+          "itemId": 3111,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3036,
+        3004,
+        3094
+      ],
+      "slot5Items": [
+        3004,
+        3094,
+        3036,
+        3072
+      ],
+      "slot6Items": [
+        3072,
+        3036,
+        6673,
+        4401
+      ]
+    },
+    {
+      "name": "Darius",
+      "id": "darius",
+      "coreItems": [
+        {
+          "itemId": 3078,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3742,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        4401,
+        3053,
+        3065
+      ],
+      "slot5Items": [
+        3053,
+        3075,
+        4401,
+        3065
+      ],
+      "slot6Items": [
+        4401,
+        3075,
+        2504,
+        3083
+      ]
+    },
+    {
+      "name": "Diana",
+      "id": "diana",
+      "coreItems": [
+        {
+          "itemId": 3152,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3157,
+        2510,
+        4645,
+        3089
+      ],
+      "slot5Items": [
+        3089,
+        2510,
+        4645,
+        3135
+      ],
+      "slot6Items": [
+        4645,
+        3135,
+        3165,
+        3102
+      ]
+    },
+    {
+      "name": "Dr. Mundo",
+      "id": "dr-mundo",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3083,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3065,
+        3075,
+        2502,
+        6665
+      ],
+      "slot5Items": [
+        3075,
+        2502,
+        3748,
+        3068
+      ],
+      "slot6Items": [
+        2502,
+        3748,
+        2501,
+        6665
+      ]
+    },
+    {
+      "name": "Draven",
+      "id": "draven",
+      "coreItems": [
+        {
+          "itemId": 6676,
+          "slot": 1
+        },
+        {
+          "itemId": 3006,
+          "slot": 2
+        },
+        {
+          "itemId": 3031,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3036,
+        3094,
+        3072,
+        6697
+      ],
+      "slot5Items": [
+        3072,
+        3094,
+        6673,
+        3033
+      ],
+      "slot6Items": [
+        3094,
+        6673,
+        3033,
+        3153
+      ]
+    },
+    {
+      "name": "Ekko",
+      "id": "ekko",
+      "coreItems": [
+        {
+          "itemId": 3152,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 2510,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3157,
+        4646,
+        3089
+      ],
+      "slot5Items": [
+        3089,
+        3157,
+        3135,
+        4646
+      ],
+      "slot6Items": [
+        3102,
+        3135,
+        3157,
+        4646
+      ]
+    },
+    {
+      "name": "Elise",
+      "id": "elise",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4645,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3089,
+        4646,
+        6653,
+        3157
+      ],
+      "slot5Items": [
+        3157,
+        3135,
+        4646,
+        3137
+      ],
+      "slot6Items": [
+        6653,
+        3100,
+        4646,
+        3102
+      ]
+    },
+    {
+      "name": "Evelynn",
+      "id": "evelynn",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        3135,
+        3100
+      ],
+      "slot5Items": [
+        3100,
+        3135,
+        3152,
+        3102
+      ],
+      "slot6Items": [
+        3089,
+        3102,
+        3157,
+        8010
+      ]
+    },
+    {
+      "name": "Ezreal",
+      "id": "ezreal",
+      "coreItems": [
+        {
+          "itemId": 3078,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 3161,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3004,
+        6694,
+        2517,
+        3153
+      ],
+      "slot5Items": [
+        6694,
+        6676,
+        3153,
+        2517
+      ],
+      "slot6Items": [
+        3003,
+        3031,
+        3153,
+        4645
+      ]
+    },
+    {
+      "name": "Fiddlesticks",
+      "id": "fiddlesticks",
+      "coreItems": [
+        {
+          "itemId": 3118,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3157,
+        4645,
+        3116,
+        3089
+      ],
+      "slot5Items": [
+        3116,
+        4645,
+        3089,
+        3135
+      ],
+      "slot6Items": [
+        4645,
+        3165,
+        3089,
+        3102
+      ]
+    },
+    {
+      "name": "Fiora",
+      "id": "fiora",
+      "coreItems": [
+        {
+          "itemId": 3074,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3078,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        6610,
+        3156,
+        3065
+      ],
+      "slot5Items": [
+        6610,
+        3065,
+        3161,
+        3053
+      ],
+      "slot6Items": [
+        3065,
+        3075,
+        6665,
+        3156
+      ]
+    },
+    {
+      "name": "Fizz",
+      "id": "fizz",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 3100,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3157,
+        4645,
+        4646,
+        3089
+      ],
+      "slot5Items": [
+        4645,
+        3089,
+        4646,
+        3135
+      ],
+      "slot6Items": [
+        3135,
+        3083,
+        3089,
+        3118
+      ]
+    },
+    {
+      "name": "Galio",
+      "id": "galio",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6664,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        2502,
+        3119,
+        2504
+      ],
+      "slot5Items": [
+        3119,
+        3083,
+        2502,
+        6665
+      ],
+      "slot6Items": [
+        3089,
+        6653,
+        3143,
+        3083
+      ]
+    },
+    {
+      "name": "Gangplank",
+      "id": "gangplank",
+      "coreItems": [
+        {
+          "itemId": 3508,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 6676,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3036,
+        3033,
+        6673
+      ],
+      "slot5Items": [
+        3036,
+        6673,
+        6696,
+        3033
+      ],
+      "slot6Items": [
+        6696,
+        6673,
+        6695,
+        3072
+      ]
+    },
+    {
+      "name": "Garen",
+      "id": "garen",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 6631,
+          "slot": 2
+        },
+        {
+          "itemId": 3046,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3742,
+        3031,
+        3065,
+        4401
+      ],
+      "slot5Items": [
+        3071,
+        3083,
+        3075,
+        3065
+      ],
+      "slot6Items": [
+        3075,
+        4401,
+        3065,
+        3036
+      ]
+    },
+    {
+      "name": "Gnar",
+      "id": "gnar",
+      "coreItems": [
+        {
+          "itemId": 3078,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3071,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3053,
+        2504,
+        6333,
+        3091
+      ],
+      "slot5Items": [
+        3075,
+        6333,
+        3091,
+        3143
+      ],
+      "slot6Items": [
+        4401,
+        3091,
+        6333,
+        3742
+      ]
+    },
+    {
+      "name": "Gragas",
+      "id": "gragas",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        3119,
+        3075
+      ],
+      "slot5Items": [
+        3089,
+        3119,
+        3065,
+        3075
+      ],
+      "slot6Items": [
+        3119,
+        3157,
+        3065,
+        3135
+      ]
+    },
+    {
+      "name": "Graves",
+      "id": "graves",
+      "coreItems": [
+        {
+          "itemId": 6676,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3031,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3036,
+        3072,
+        6673,
+        3033
+      ],
+      "slot5Items": [
+        3072,
+        6673,
+        3033,
+        6692
+      ],
+      "slot6Items": [
+        6673,
+        6692,
+        3156,
+        3139
+      ]
+    },
+    {
+      "name": "Gwen",
+      "id": "gwen",
+      "coreItems": [
+        {
+          "itemId": 3111,
+          "slot": 1
+        },
+        {
+          "itemId": 4633,
+          "slot": 2
+        },
+        {
+          "itemId": 2510,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3115,
+        3065,
+        2504
+      ],
+      "slot5Items": [
+        3065,
+        3089,
+        3075,
+        3157
+      ],
+      "slot6Items": [
+        3089,
+        3157,
+        3075,
+        4401
+      ]
+    },
+    {
+      "name": "Hecarim",
+      "id": "hecarim",
+      "coreItems": [
+        {
+          "itemId": 3158,
+          "slot": 1
+        },
+        {
+          "itemId": 6692,
+          "slot": 2
+        },
+        {
+          "itemId": 3161,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3065,
+        3004,
+        3071
+      ],
+      "slot5Items": [
+        3004,
+        3065,
+        3075,
+        2517
+      ],
+      "slot6Items": [
+        3071,
+        3091
+      ]
+    },
+    {
+      "name": "Heimerdinger",
+      "id": "heimerdinger",
+      "coreItems": [
+        {
+          "itemId": 2503,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3116,
+        3157,
+        3165,
+        3089
+      ],
+      "slot5Items": [
+        4645,
+        3165,
+        3089,
+        3157
+      ],
+      "slot6Items": [
+        3089,
+        3157,
+        3165,
+        3118
+      ]
+    },
+    {
+      "name": "Hwei",
+      "id": "hwei",
+      "coreItems": [
+        {
+          "itemId": 2503,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        3003,
+        3137
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        3003,
+        3165
+      ],
+      "slot6Items": [
+        3003,
+        3157,
+        3135,
+        3165
+      ]
+    },
+    {
+      "name": "Illaoi",
+      "id": "illaoi",
+      "coreItems": [
+        {
+          "itemId": 6610,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6662,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3065,
+        6333,
+        3053,
+        3075
+      ],
+      "slot5Items": [
+        3053,
+        3075,
+        6333,
+        2504
+      ],
+      "slot6Items": [
+        3119,
+        3075,
+        3110,
+        3083
+      ]
+    },
+    {
+      "name": "Irelia",
+      "id": "irelia",
+      "coreItems": [
+        {
+          "itemId": 3153,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6610,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        6665,
+        3091,
+        3053
+      ],
+      "slot5Items": [
+        6665,
+        3065,
+        3143,
+        3074
+      ],
+      "slot6Items": [
+        3053,
+        4401,
+        3143,
+        4646
+      ]
+    },
+    {
+      "name": "Ivern",
+      "id": "ivern",
+      "coreItems": [
+        {
+          "itemId": 6617,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 3107,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        2526,
+        3190,
+        6653,
+        3504
+      ],
+      "slot5Items": [
+        4005,
+        3504,
+        6621,
+        3165
+      ],
+      "slot6Items": [
+        3190,
+        6620,
+        3109
+      ]
+    },
+    {
+      "name": "Janna",
+      "id": "janna",
+      "coreItems": [
+        {
+          "itemId": 3158,
+          "slot": 1
+        },
+        {
+          "itemId": 6617,
+          "slot": 2
+        },
+        {
+          "itemId": 3107,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3504,
+        2526,
+        3165,
+        4005
+      ],
+      "slot5Items": [
+        2526,
+        3003,
+        4005,
+        3089
+      ],
+      "slot6Items": [
+        6621,
+        3003,
+        6653,
+        6655
+      ]
+    },
+    {
+      "name": "Jarvan IV",
+      "id": "jarvan",
+      "coreItems": [
+        {
+          "itemId": 6610,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6692,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3053,
+        3156,
+        3075
+      ],
+      "slot5Items": [
+        3053,
+        3156,
+        3075,
+        3161
+      ],
+      "slot6Items": [
+        4401,
+        3814,
+        3110,
+        6665
+      ]
+    },
+    {
+      "name": "Jax",
+      "id": "jax",
+      "coreItems": [
+        {
+          "itemId": 3078,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6610,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3153,
+        3091,
+        3161
+      ],
+      "slot5Items": [
+        3161,
+        3153,
+        3091,
+        3065
+      ],
+      "slot6Items": [
+        3153,
+        3065,
+        3053,
+        3157
+      ]
+    },
+    {
+      "name": "Jayce",
+      "id": "jayce",
+      "coreItems": [
+        {
+          "itemId": 6697,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 6676,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6694,
+        3004,
+        6692,
+        3161
+      ],
+      "slot5Items": [
+        3004,
+        3161,
+        3814,
+        6692
+      ],
+      "slot6Items": [
+        3161,
+        6699,
+        6692,
+        3814
+      ]
+    },
+    {
+      "name": "Jhin",
+      "id": "jhin",
+      "coreItems": [
+        {
+          "itemId": 6676,
+          "slot": 1
+        },
+        {
+          "itemId": 3009,
+          "slot": 2
+        },
+        {
+          "itemId": 3031,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3094,
+        3036,
+        3033,
+        2523
+      ],
+      "slot5Items": [
+        3036,
+        3072,
+        3033,
+        3814
+      ],
+      "slot6Items": [
+        3072,
+        3814,
+        3097,
+        3142
+      ]
+    },
+    {
+      "name": "Jinx",
+      "id": "jinx",
+      "coreItems": [
+        {
+          "itemId": 3032,
+          "slot": 1
+        },
+        {
+          "itemId": 3006,
+          "slot": 2
+        },
+        {
+          "itemId": 3085,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3036,
+        3033,
+        3094
+      ],
+      "slot5Items": [
+        3036,
+        3072,
+        3033,
+        3153
+      ],
+      "slot6Items": [
+        3072,
+        3153,
+        3094,
+        3046
+      ]
+    },
+    {
+      "name": "K'Sante",
+      "id": "ksante",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6662,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6665,
+        2504,
+        2502,
+        6664
+      ],
+      "slot5Items": [
+        3075,
+        2502,
+        2504,
+        3143
+      ],
+      "slot6Items": [
+        6664,
+        2504,
+        4401,
+        2502
+      ]
+    },
+    {
+      "name": "Kai'Sa",
+      "id": "kaisa",
+      "coreItems": [
+        {
+          "itemId": 6672,
+          "slot": 1
+        },
+        {
+          "itemId": 3006,
+          "slot": 2
+        },
+        {
+          "itemId": 3124,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        2510,
+        3115,
+        3302,
+        3089
+      ],
+      "slot5Items": [
+        3153,
+        3089,
+        3115,
+        3004
+      ],
+      "slot6Items": [
+        3115,
+        3004,
+        3087,
+        3157
+      ]
+    },
+    {
+      "name": "Kalista",
+      "id": "kalista",
+      "coreItems": [
+        {
+          "itemId": 3153,
+          "slot": 1
+        },
+        {
+          "itemId": 3085,
+          "slot": 2
+        },
+        {
+          "itemId": 3124,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3302,
+        3091,
+        6665,
+        3072
+      ],
+      "slot5Items": [
+        3072,
+        6665,
+        3091,
+        3814
+      ],
+      "slot6Items": [
+        3031,
+        6676,
+        3143,
+        3036
+      ]
+    },
+    {
+      "name": "Karma",
+      "id": "karma",
+      "coreItems": [
+        {
+          "itemId": 3118,
+          "slot": 1
+        },
+        {
+          "itemId": 6655,
+          "slot": 2
+        },
+        {
+          "itemId": 3020,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        4646,
+        3089,
+        3165
+      ],
+      "slot5Items": [
+        3089,
+        4646,
+        2526,
+        3135
+      ],
+      "slot6Items": [
+        2526,
+        3135,
+        6653,
+        3137
+      ]
+    },
+    {
+      "name": "Karthus",
+      "id": "karthus",
+      "coreItems": [
+        {
+          "itemId": 3118,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        3135,
+        4646
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        3165,
+        4646
+      ],
+      "slot6Items": [
+        3135,
+        4646,
+        3003,
+        2503
+      ]
+    },
+    {
+      "name": "Kassadin",
+      "id": "kassadin",
+      "coreItems": [
+        {
+          "itemId": 6657,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 3118,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3157,
+        3003,
+        3100,
+        3110
+      ],
+      "slot5Items": [
+        3003,
+        3089,
+        4645,
+        3100
+      ],
+      "slot6Items": [
+        8020,
+        3135,
+        3100,
+        3152
+      ]
+    },
+    {
+      "name": "Katarina",
+      "id": "katarina",
+      "coreItems": [
+        {
+          "itemId": 3020,
+          "slot": 1
+        },
+        {
+          "itemId": 4646,
+          "slot": 2
+        },
+        {
+          "itemId": 4645,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3089,
+        3157,
+        3153,
+        3302
+      ],
+      "slot5Items": [
+        3157,
+        3135,
+        3146,
+        3302
+      ],
+      "slot6Items": [
+        3135,
+        3102,
+        3146,
+        3156
+      ]
+    },
+    {
+      "name": "Kayle",
+      "id": "kayle",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 3153,
+          "slot": 2
+        },
+        {
+          "itemId": 3124,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3091,
+        3302,
+        3115,
+        3089
+      ],
+      "slot5Items": [
+        3302,
+        2510,
+        3089,
+        3087
+      ],
+      "slot6Items": [
+        3072,
+        3089,
+        3115,
+        3135
+      ]
+    },
+    {
+      "name": "Kayn",
+      "id": "kayn",
+      "coreItems": [
+        {
+          "itemId": 3111,
+          "slot": 1
+        },
+        {
+          "itemId": 6692,
+          "slot": 2
+        },
+        {
+          "itemId": 3071,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3065,
+        3004,
+        6694
+      ],
+      "slot5Items": [
+        6676,
+        3161,
+        6610,
+        3065
+      ],
+      "slot6Items": [
+        3004,
+        6697,
+        6696,
+        6610
+      ]
+    },
+    {
+      "name": "Kennen",
+      "id": "kennen",
+      "coreItems": [
+        {
+          "itemId": 3152,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 3157,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        4646,
+        3118
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        4646,
+        3102
+      ],
+      "slot6Items": [
+        3135,
+        3165,
+        3102,
+        3118
+      ]
+    },
+    {
+      "name": "Kha'Zix",
+      "id": "khazix",
+      "coreItems": [
+        {
+          "itemId": 6697,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 6676,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3814,
+        6694,
+        3004,
+        6692
+      ],
+      "slot5Items": [
+        3004,
+        6694,
+        3156,
+        6692
+      ],
+      "slot6Items": [
+        6692,
+        6695,
+        3156,
+        6699
+      ]
+    },
+    {
+      "name": "Kindred",
+      "id": "kindred",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 3032,
+          "slot": 2
+        },
+        {
+          "itemId": 6676,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3153,
+        3036,
+        3085
+      ],
+      "slot5Items": [
+        3036,
+        3072,
+        3094,
+        3153
+      ],
+      "slot6Items": [
+        3085,
+        3091,
+        3156,
+        3072
+      ]
+    },
+    {
+      "name": "Kled",
+      "id": "kled",
+      "coreItems": [
+        {
+          "itemId": 6631,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3053,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6610,
+        2501,
+        6675,
+        2517
+      ],
+      "slot5Items": [
+        3071,
+        6333,
+        3036
+      ],
+      "slot6Items": [
+        2504,
+        2501
+      ]
+    },
+    {
+      "name": "Kog'Maw",
+      "id": "kogmaw",
+      "coreItems": [
+        {
+          "itemId": 3118,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3091,
+        3003,
+        3085,
+        3302
+      ],
+      "slot5Items": [
+        3003,
+        3302,
+        3124,
+        3089
+      ],
+      "slot6Items": [
+        6672,
+        3124,
+        3157,
+        3072
+      ]
+    },
+    {
+      "name": "LeBlanc",
+      "id": "leblanc",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        3135,
+        3157
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        3157,
+        3102
+      ],
+      "slot6Items": [
+        3157,
+        3102,
+        3135,
+        3118
+      ]
+    },
+    {
+      "name": "Lee Sin",
+      "id": "lee-sin",
+      "coreItems": [
+        {
+          "itemId": 6692,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6610,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3071,
+        3156,
+        3053
+      ],
+      "slot5Items": [
+        3071,
+        3065,
+        3053,
+        3156
+      ],
+      "slot6Items": [
+        3156,
+        3814,
+        3053,
+        3083
+      ]
+    },
+    {
+      "name": "Leona",
+      "id": "leona",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 2502,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        3119,
+        6664,
+        2504
+      ],
+      "slot5Items": [
+        3119,
+        6665,
+        3083,
+        2504
+      ],
+      "slot6Items": [
+        3083,
+        2504,
+        3143,
+        6665
+      ]
+    },
+    {
+      "name": "Lillia",
+      "id": "lillia",
+      "coreItems": [
+        {
+          "itemId": 2503,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3116,
+        4629,
+        4633,
+        3157
+      ],
+      "slot5Items": [
+        3157,
+        4629,
+        4633,
+        3165
+      ],
+      "slot6Items": [
+        4633,
+        4629,
+        3089,
+        4401
+      ]
+    },
+    {
+      "name": "Lissandra",
+      "id": "lissandra",
+      "coreItems": [
+        {
+          "itemId": 3118,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 3157,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        6653,
+        3089,
+        4646
+      ],
+      "slot5Items": [
+        3089,
+        6653,
+        3137,
+        3135
+      ],
+      "slot6Items": [
+        4646,
+        3137,
+        3102,
+        6653
+      ]
+    },
+    {
+      "name": "Lucian",
+      "id": "lucian",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 6676,
+          "slot": 2
+        },
+        {
+          "itemId": 3031,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3036,
+        6675,
+        3094,
+        3153
+      ],
+      "slot5Items": [
+        3072,
+        3033,
+        3153,
+        3094
+      ],
+      "slot6Items": [
+        3153,
+        6675,
+        3033,
+        3094
+      ]
+    },
+    {
+      "name": "Lulu",
+      "id": "lulu",
+      "coreItems": [
+        {
+          "itemId": 6617,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 3504,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        2526,
+        3107,
+        3222,
+        2065
+      ],
+      "slot5Items": [
+        2065,
+        3107,
+        3190,
+        6616
+      ],
+      "slot6Items": [
+        3107,
+        3003,
+        3165,
+        3190
+      ]
+    },
+    {
+      "name": "Lux",
+      "id": "lux",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        4628,
+        3165
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        4628,
+        3003
+      ],
+      "slot6Items": [
+        3135,
+        4628,
+        3157,
+        3118
+      ]
+    },
+    {
+      "name": "Malphite",
+      "id": "malphite",
+      "coreItems": [
+        {
+          "itemId": 3118,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        3075,
+        2504
+      ],
+      "slot5Items": [
+        3089,
+        3083,
+        3075,
+        3135
+      ],
+      "slot6Items": [
+        3135,
+        3075,
+        3110,
+        2504
+      ]
+    },
+    {
+      "name": "Malzahar",
+      "id": "malzahar",
+      "coreItems": [
+        {
+          "itemId": 2503,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3116,
+        4645,
+        8010,
+        3165
+      ],
+      "slot5Items": [
+        3165,
+        4645,
+        3089,
+        8010
+      ],
+      "slot6Items": [
+        3089,
+        4645,
+        3003,
+        3135
+      ]
+    },
+    {
+      "name": "Maokai",
+      "id": "maokai",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3065,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        3119,
+        2502,
+        6665
+      ],
+      "slot5Items": [
+        3119,
+        3083,
+        2502,
+        3143
+      ],
+      "slot6Items": [
+        3083,
+        6665,
+        3143,
+        3157
+      ]
+    },
+    {
+      "name": "Master Yi",
+      "id": "master-yi",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 6676,
+          "slot": 2
+        },
+        {
+          "itemId": 3153,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3091,
+        3031,
+        6333,
+        3073
+      ],
+      "slot5Items": [
+        6333,
+        3031,
+        3036,
+        3302
+      ],
+      "slot6Items": [
+        3031,
+        3053,
+        3073,
+        6672
+      ]
+    },
+    {
+      "name": "Mel",
+      "id": "mel",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4645,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3089,
+        6653,
+        4629,
+        3135
+      ],
+      "slot5Items": [
+        3135,
+        3157,
+        6653,
+        3165
+      ],
+      "slot6Items": [
+        3003,
+        3157,
+        3102,
+        3165
+      ]
+    },
+    {
+      "name": "Milio",
+      "id": "milio",
+      "coreItems": [
+        {
+          "itemId": 6617,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 3504,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        2526,
+        3107,
+        6621,
+        4645
+      ],
+      "slot5Items": [
+        6616,
+        3089,
+        3107,
+        4646
+      ],
+      "slot6Items": [
+        3107,
+        3003,
+        3165,
+        3089
+      ]
+    },
+    {
+      "name": "Miss Fortune",
+      "id": "miss-fortune",
+      "coreItems": [
+        {
+          "itemId": 6676,
+          "slot": 1
+        },
+        {
+          "itemId": 3006,
+          "slot": 2
+        },
+        {
+          "itemId": 6696,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6694,
+        3031,
+        3072,
+        3036
+      ],
+      "slot5Items": [
+        3072,
+        3814,
+        3094,
+        3004
+      ],
+      "slot6Items": [
+        3004,
+        3031,
+        3036,
+        3046
+      ]
+    },
+    {
+      "name": "Mordekaiser",
+      "id": "mordekaiser",
+      "coreItems": [
+        {
+          "itemId": 4633,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3116,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3065,
+        3075,
+        6653,
+        6665
+      ],
+      "slot5Items": [
+        3075,
+        6653,
+        6665,
+        2502
+      ],
+      "slot6Items": [
+        6665,
+        6653,
+        2502,
+        3143
+      ]
+    },
+    {
+      "name": "Morgana",
+      "id": "morgana",
+      "coreItems": [
+        {
+          "itemId": 2503,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3157,
+        3116,
+        4645,
+        3165
+      ],
+      "slot5Items": [
+        3116,
+        3165,
+        4645,
+        3003
+      ],
+      "slot6Items": [
+        3165,
+        3003,
+        3089,
+        4645
+      ]
+    },
+    {
+      "name": "Naafiri",
+      "id": "naafiri",
+      "coreItems": [
+        {
+          "itemId": 6697,
+          "slot": 1
+        },
+        {
+          "itemId": 6692,
+          "slot": 2
+        },
+        {
+          "itemId": 6676,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6694,
+        6333,
+        6696,
+        3814
+      ],
+      "slot5Items": [
+        6333,
+        3814,
+        3161,
+        6696
+      ],
+      "slot6Items": [
+        3156,
+        3814,
+        3161,
+        6696
+      ]
+    },
+    {
+      "name": "Nami",
+      "id": "nami",
+      "coreItems": [
+        {
+          "itemId": 3158,
+          "slot": 1
+        },
+        {
+          "itemId": 6617,
+          "slot": 2
+        },
+        {
+          "itemId": 3504,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3107,
+        2526,
+        4005,
+        3165
+      ],
+      "slot5Items": [
+        2526,
+        3003,
+        6621,
+        4005
+      ],
+      "slot6Items": [
+        3003,
+        3165,
+        4005,
+        4645
+      ]
+    },
+    {
+      "name": "Nasus",
+      "id": "nasus",
+      "coreItems": [
+        {
+          "itemId": 3078,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3065,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3110,
+        3075,
+        4401,
+        3116
+      ],
+      "slot5Items": [
+        3075,
+        4401,
+        6610,
+        3143
+      ],
+      "slot6Items": [
+        6665,
+        6610,
+        3083,
+        3143
+      ]
+    },
+    {
+      "name": "Nautilus",
+      "id": "nautilus",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 2502,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        3119,
+        2504,
+        3110
+      ],
+      "slot5Items": [
+        3119,
+        6665,
+        3083,
+        3110
+      ],
+      "slot6Items": [
+        6665,
+        3110,
+        3068,
+        2504
+      ]
+    },
+    {
+      "name": "Neeko",
+      "id": "neeko",
+      "coreItems": [
+        {
+          "itemId": 3118,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 3152,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3157,
+        4646,
+        3089
+      ],
+      "slot5Items": [
+        3157,
+        3089,
+        4646,
+        3135
+      ],
+      "slot6Items": [
+        3089,
+        4646,
+        3165,
+        3102
+      ]
+    },
+    {
+      "name": "Nidalee",
+      "id": "nidalee",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        4628,
+        3135
+      ],
+      "slot5Items": [
+        3089,
+        4628,
+        3135,
+        3003
+      ],
+      "slot6Items": [
+        3157,
+        3135,
+        3102,
+        4628
+      ]
+    },
+    {
+      "name": "Nilah",
+      "id": "nilah",
+      "coreItems": [
+        {
+          "itemId": 6676,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6673,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3036,
+        3031,
+        3072,
+        6675
+      ],
+      "slot5Items": [
+        3072,
+        3031,
+        6675,
+        3091
+      ],
+      "slot6Items": [
+        3073,
+        6675,
+        3139,
+        2504
+      ]
+    },
+    {
+      "name": "Nocturne",
+      "id": "nocturne",
+      "coreItems": [
+        {
+          "itemId": 6676,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6696,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3073,
+        3814,
+        6694,
+        3004
+      ],
+      "slot5Items": [
+        3004,
+        3814,
+        6697,
+        6333
+      ],
+      "slot6Items": [
+        6631,
+        6697,
+        3074,
+        3814
+      ]
+    },
+    {
+      "name": "Nunu & Willump",
+      "id": "nunu",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        3135,
+        3065
+      ],
+      "slot5Items": [
+        3089,
+        3102,
+        3135,
+        3119
+      ],
+      "slot6Items": [
+        3135,
+        3157,
+        3102,
+        8020
+      ]
+    },
+    {
+      "name": "Olaf",
+      "id": "olaf",
+      "coreItems": [
+        {
+          "itemId": 6631,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3073,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3065,
+        3053,
+        3156
+      ],
+      "slot5Items": [
+        3065,
+        3153,
+        3053,
+        6610
+      ],
+      "slot6Items": [
+        3153,
+        6610,
+        3053,
+        3071
+      ]
+    },
+    {
+      "name": "Orianna",
+      "id": "orianna",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4645,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3089,
+        4646,
+        3003,
+        3135
+      ],
+      "slot5Items": [
+        3135,
+        3157,
+        4646,
+        3003
+      ],
+      "slot6Items": [
+        3003,
+        3165,
+        2503,
+        3157
+      ]
+    },
+    {
+      "name": "Ornn",
+      "id": "ornn",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 2502,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        3083,
+        6665,
+        2504
+      ],
+      "slot5Items": [
+        3119,
+        6665,
+        3083,
+        3065
+      ],
+      "slot6Items": [
+        3083,
+        6665,
+        3065,
+        2504
+      ]
+    },
+    {
+      "name": "Pantheon",
+      "id": "pantheon",
+      "coreItems": [
+        {
+          "itemId": 3111,
+          "slot": 1
+        },
+        {
+          "itemId": 6610,
+          "slot": 2
+        },
+        {
+          "itemId": 6692,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3156,
+        3071,
+        6676
+      ],
+      "slot5Items": [
+        3071,
+        3156,
+        3161,
+        6676
+      ],
+      "slot6Items": [
+        3156,
+        3053,
+        3153,
+        3161
+      ]
+    },
+    {
+      "name": "Poppy",
+      "id": "poppy",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 2502,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3119,
+        3075,
+        2504,
+        3083
+      ],
+      "slot5Items": [
+        3083,
+        3075,
+        2504,
+        6665
+      ],
+      "slot6Items": [
+        2504,
+        6610,
+        3143,
+        3075
+      ]
+    },
+    {
+      "name": "Pyke",
+      "id": "pyke",
+      "coreItems": [
+        {
+          "itemId": 6697,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 6696,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3814,
+        3142,
+        6676,
+        3156
+      ],
+      "slot5Items": [
+        6694,
+        3142,
+        6333,
+        6676
+      ],
+      "slot6Items": [
+        6699,
+        3142,
+        6698,
+        6676
+      ]
+    },
+    {
+      "name": "Qiyana",
+      "id": "qiyana",
+      "coreItems": [
+        {
+          "itemId": 6697,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 6696,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6694,
+        3814,
+        6676,
+        3004
+      ],
+      "slot5Items": [
+        3814,
+        6698,
+        6695,
+        3004
+      ],
+      "slot6Items": [
+        6698,
+        3004,
+        6699,
+        3142
+      ]
+    },
+    {
+      "name": "Quinn",
+      "id": "quinn",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 6676,
+          "slot": 2
+        },
+        {
+          "itemId": 3087,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3036,
+        3031,
+        3153,
+        3033
+      ],
+      "slot5Items": [
+        3031,
+        3153,
+        6699,
+        3094
+      ],
+      "slot6Items": [
+        3153,
+        3072,
+        3091,
+        3094
+      ]
+    },
+    {
+      "name": "Rakan",
+      "id": "rakan",
+      "coreItems": [
+        {
+          "itemId": 3111,
+          "slot": 1
+        },
+        {
+          "itemId": 3190,
+          "slot": 2
+        },
+        {
+          "itemId": 3050,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3119,
+        3075,
+        3107,
+        2504
+      ],
+      "slot5Items": [
+        4401,
+        3083,
+        3075,
+        4645
+      ],
+      "slot6Items": [
+        3089,
+        6665,
+        3083,
+        6664
+      ]
+    },
+    {
+      "name": "Rammus",
+      "id": "rammus",
+      "coreItems": [
+        {
+          "itemId": 3075,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3084,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        2502,
+        3083,
+        3068,
+        6665
+      ],
+      "slot5Items": [
+        6665,
+        3083,
+        3143,
+        6664
+      ],
+      "slot6Items": [
+        3083,
+        2525,
+        3748,
+        2524
+      ]
+    },
+    {
+      "name": "Rek'Sai",
+      "id": "reksai",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 2502,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3065,
+        3075,
+        3143,
+        6333
+      ],
+      "slot5Items": [
+        3075,
+        3071,
+        6694,
+        6665
+      ],
+      "slot6Items": [
+        3053,
+        3748,
+        6675,
+        6333
+      ]
+    },
+    {
+      "name": "Rell",
+      "id": "rell",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 2502,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3119,
+        2504,
+        3083,
+        3075
+      ],
+      "slot5Items": [
+        6665,
+        2504,
+        3075,
+        2525
+      ],
+      "slot6Items": [
+        3050,
+        3083,
+        2504,
+        3742
+      ]
+    },
+    {
+      "name": "Renata Glasc",
+      "id": "renata-glasc",
+      "coreItems": [
+        {
+          "itemId": 3118,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 4005,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3107,
+        3190,
+        3003,
+        2065
+      ],
+      "slot5Items": [
+        2526,
+        3003,
+        2065,
+        3165
+      ],
+      "slot6Items": [
+        3003,
+        3504,
+        6653,
+        2503
+      ]
+    },
+    {
+      "name": "Renekton",
+      "id": "renekton",
+      "coreItems": [
+        {
+          "itemId": 6692,
+          "slot": 1
+        },
+        {
+          "itemId": 6610,
+          "slot": 2
+        },
+        {
+          "itemId": 3111,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3065,
+        3053,
+        3161
+      ],
+      "slot5Items": [
+        3065,
+        3071,
+        3053,
+        3161
+      ],
+      "slot6Items": [
+        3143,
+        3161,
+        3071,
+        3053
+      ]
+    },
+    {
+      "name": "Rengar",
+      "id": "rengar",
+      "coreItems": [
+        {
+          "itemId": 6697,
+          "slot": 1
+        },
+        {
+          "itemId": 6676,
+          "slot": 2
+        },
+        {
+          "itemId": 3111,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3036,
+        6698,
+        3142,
+        3814
+      ],
+      "slot5Items": [
+        6698,
+        6699,
+        3814,
+        3084
+      ],
+      "slot6Items": [
+        6696,
+        6610,
+        6699
+      ]
+    },
+    {
+      "name": "Riven",
+      "id": "riven",
+      "coreItems": [
+        {
+          "itemId": 6692,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6610,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3161,
+        3071,
+        3074
+      ],
+      "slot5Items": [
+        3161,
+        3071,
+        2517,
+        3156
+      ],
+      "slot6Items": [
+        3071,
+        3139,
+        3065,
+        3053
+      ]
+    },
+    {
+      "name": "Rumble",
+      "id": "rumble",
+      "coreItems": [
+        {
+          "itemId": 6653,
+          "slot": 1
+        },
+        {
+          "itemId": 3118,
+          "slot": 2
+        },
+        {
+          "itemId": 3020,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3116,
+        8010,
+        3157
+      ],
+      "slot5Items": [
+        3089,
+        3157,
+        3116,
+        8010
+      ],
+      "slot6Items": [
+        8010,
+        3135,
+        3165,
+        3157
+      ]
+    },
+    {
+      "name": "Ryze",
+      "id": "ryze",
+      "coreItems": [
+        {
+          "itemId": 6657,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 2522,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3003,
+        3110,
+        3089,
+        3135
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        3110,
+        4629
+      ],
+      "slot6Items": [
+        3119,
+        4645,
+        2510,
+        3102
+      ]
+    },
+    {
+      "name": "Samira",
+      "id": "samira",
+      "coreItems": [
+        {
+          "itemId": 6676,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6673,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3036,
+        3072,
+        3033
+      ],
+      "slot5Items": [
+        3072,
+        3036,
+        6333,
+        3033
+      ],
+      "slot6Items": [
+        3036,
+        6333,
+        3033,
+        3139
+      ]
+    },
+    {
+      "name": "Sejuani",
+      "id": "sejuani",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 2502,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3119,
+        3075,
+        3083,
+        6664
+      ],
+      "slot5Items": [
+        2504,
+        3075,
+        3083,
+        3143
+      ],
+      "slot6Items": [
+        3143,
+        6665,
+        6664,
+        3003
+      ]
+    },
+    {
+      "name": "Senna",
+      "id": "senna",
+      "coreItems": [
+        {
+          "itemId": 3087,
+          "slot": 1
+        },
+        {
+          "itemId": 3009,
+          "slot": 2
+        },
+        {
+          "itemId": 3071,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3094,
+        3031,
+        3036,
+        3004
+      ],
+      "slot5Items": [
+        3031,
+        3153,
+        3004,
+        3036
+      ],
+      "slot6Items": [
+        3004,
+        3153,
+        2523,
+        3072
+      ]
+    },
+    {
+      "name": "Seraphine",
+      "id": "seraphine",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3116,
+        4645,
+        3165,
+        3089
+      ],
+      "slot5Items": [
+        3165,
+        3089,
+        4645,
+        3137
+      ],
+      "slot6Items": [
+        3089,
+        2526,
+        3003,
+        3137
+      ]
+    },
+    {
+      "name": "Sett",
+      "id": "sett",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 2501,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3053,
+        3083,
+        3075,
+        6631
+      ],
+      "slot5Items": [
+        3083,
+        3075,
+        3748,
+        3161
+      ],
+      "slot6Items": [
+        3075,
+        3065,
+        4401,
+        3161
+      ]
+    },
+    {
+      "name": "Shaco",
+      "id": "shaco",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        4646,
+        3089,
+        3165
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        3031,
+        3165
+      ],
+      "slot6Items": [
+        3165,
+        3036,
+        3135,
+        3031
+      ]
+    },
+    {
+      "name": "Shen",
+      "id": "shen",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 2502,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        3748,
+        2504,
+        6664
+      ],
+      "slot5Items": [
+        3083,
+        3143,
+        6664,
+        2504
+      ],
+      "slot6Items": [
+        6664,
+        6665,
+        3143,
+        3748
+      ]
+    },
+    {
+      "name": "Shyvana",
+      "id": "shyvana",
+      "coreItems": [
+        {
+          "itemId": 2510,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6610,
+        6333,
+        4633,
+        3053
+      ],
+      "slot5Items": [
+        3083,
+        6333,
+        4645,
+        3053
+      ],
+      "slot6Items": [
+        3065,
+        4646,
+        3053,
+        3161
+      ]
+    },
+    {
+      "name": "Singed",
+      "id": "singed",
+      "coreItems": [
+        {
+          "itemId": 6657,
+          "slot": 1
+        },
+        {
+          "itemId": 3009,
+          "slot": 2
+        },
+        {
+          "itemId": 3116,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6653,
+        3742,
+        4401,
+        3119
+      ],
+      "slot5Items": [
+        3119,
+        3742,
+        4401,
+        4633
+      ],
+      "slot6Items": [
+        3742,
+        3143,
+        3075,
+        6665
+      ]
+    },
+    {
+      "name": "Sion",
+      "id": "sion",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 2502,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        6664,
+        3083,
+        2504
+      ],
+      "slot5Items": [
+        3083,
+        3143,
+        6665,
+        2504
+      ],
+      "slot6Items": [
+        3748,
+        6665,
+        2504,
+        3110
+      ]
+    },
+    {
+      "name": "Sivir",
+      "id": "sivir",
+      "coreItems": [
+        {
+          "itemId": 3032,
+          "slot": 1
+        },
+        {
+          "itemId": 3006,
+          "slot": 2
+        },
+        {
+          "itemId": 6675,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3036,
+        3033,
+        6676
+      ],
+      "slot5Items": [
+        3036,
+        3072,
+        3153,
+        3033
+      ],
+      "slot6Items": [
+        3072,
+        3153,
+        3046,
+        3139
+      ]
+    },
+    {
+      "name": "Skarner",
+      "id": "skarner",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 2502,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3119,
+        3075,
+        2504,
+        6665
+      ],
+      "slot5Items": [
+        3083,
+        3075,
+        6665,
+        3110
+      ],
+      "slot6Items": [
+        2504,
+        3065,
+        3075
+      ]
+    },
+    {
+      "name": "Smolder",
+      "id": "smolder",
+      "coreItems": [
+        {
+          "itemId": 3508,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 3161,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3094,
+        3031,
+        3036,
+        3004
+      ],
+      "slot5Items": [
+        3004,
+        3036,
+        3031,
+        3072
+      ],
+      "slot6Items": [
+        3072,
+        3031,
+        3036,
+        2504
+      ]
+    },
+    {
+      "name": "Sona",
+      "id": "sona",
+      "coreItems": [
+        {
+          "itemId": 6617,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 3504,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        2526,
+        3107,
+        6616,
+        3003
+      ],
+      "slot5Items": [
+        3003,
+        6616,
+        3107,
+        3089
+      ],
+      "slot6Items": [
+        6620,
+        3190,
+        3157,
+        3143
+      ]
+    },
+    {
+      "name": "Soraka",
+      "id": "soraka",
+      "coreItems": [
+        {
+          "itemId": 6617,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 3083,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        2526,
+        3065,
+        3107,
+        3119
+      ],
+      "slot5Items": [
+        3065,
+        3119,
+        3107,
+        6621
+      ],
+      "slot6Items": [
+        3119,
+        3504,
+        6653,
+        2065
+      ]
+    },
+    {
+      "name": "Swain",
+      "id": "swain",
+      "coreItems": [
+        {
+          "itemId": 6657,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3116,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3065,
+        6653,
+        4633,
+        2502
+      ],
+      "slot5Items": [
+        6653,
+        3157,
+        4633,
+        6665
+      ],
+      "slot6Items": [
+        2502,
+        4633,
+        3075,
+        3119
+      ]
+    },
+    {
+      "name": "Sylas",
+      "id": "sylas",
+      "coreItems": [
+        {
+          "itemId": 6657,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 4633,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3157,
+        3065,
+        4645,
+        3152
+      ],
+      "slot5Items": [
+        3065,
+        4645,
+        3089,
+        4629
+      ],
+      "slot6Items": [
+        3152,
+        3089,
+        3100,
+        3083
+      ]
+    },
+    {
+      "name": "Syndra",
+      "id": "syndra",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        3135,
+        3157
+      ],
+      "slot5Items": [
+        3135,
+        3089,
+        3157,
+        3137
+      ],
+      "slot6Items": [
+        3102,
+        3157,
+        3089,
+        3137
+      ]
+    },
+    {
+      "name": "Tahm Kench",
+      "id": "tahm-kench",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3083,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        3065,
+        2502,
+        3119
+      ],
+      "slot5Items": [
+        6665,
+        3065,
+        3119,
+        2504
+      ],
+      "slot6Items": [
+        2502,
+        3065,
+        3119,
+        3110
+      ]
+    },
+    {
+      "name": "Taliyah",
+      "id": "taliyah",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4645,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3089,
+        6653,
+        3116,
+        4646
+      ],
+      "slot5Items": [
+        3003,
+        3135,
+        3137,
+        3102
+      ],
+      "slot6Items": [
+        3165,
+        3102,
+        4646,
+        3116
+      ]
+    },
+    {
+      "name": "Talon",
+      "id": "talon",
+      "coreItems": [
+        {
+          "itemId": 6697,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 6696,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6694,
+        3814,
+        6692,
+        6676
+      ],
+      "slot5Items": [
+        3814,
+        6692,
+        3142,
+        6695
+      ],
+      "slot6Items": [
+        6699,
+        3142,
+        6692,
+        3004
+      ]
+    },
+    {
+      "name": "Taric",
+      "id": "taric",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3065,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        3119,
+        2502,
+        3110
+      ],
+      "slot5Items": [
+        3119,
+        3110,
+        3083,
+        2526
+      ],
+      "slot6Items": [
+        2526,
+        3110,
+        2504
+      ]
+    },
+    {
+      "name": "Teemo",
+      "id": "teemo",
+      "coreItems": [
+        {
+          "itemId": 3118,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3165,
+        2503,
+        3089
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        3165,
+        3115
+      ],
+      "slot6Items": [
+        3165,
+        3135,
+        3115,
+        3137
+      ]
+    },
+    {
+      "name": "Thresh",
+      "id": "thresh",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3083,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3119,
+        3075,
+        2504,
+        3143
+      ],
+      "slot5Items": [
+        3075,
+        2504,
+        3143,
+        6665
+      ],
+      "slot6Items": [
+        6665,
+        2504,
+        3143,
+        6676
+      ]
+    },
+    {
+      "name": "Tristana",
+      "id": "tristana",
+      "coreItems": [
+        {
+          "itemId": 3032,
+          "slot": 1
+        },
+        {
+          "itemId": 3006,
+          "slot": 2
+        },
+        {
+          "itemId": 6675,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3036,
+        3072,
+        3094
+      ],
+      "slot5Items": [
+        3036,
+        3072,
+        3153,
+        6676
+      ],
+      "slot6Items": [
+        3072,
+        3153,
+        3033,
+        3094
+      ]
+    },
+    {
+      "name": "Trundle",
+      "id": "trundle",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3065,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        6662,
+        3153,
+        6610
+      ],
+      "slot5Items": [
+        3119,
+        3153,
+        6664,
+        2502
+      ],
+      "slot6Items": [
+        2502,
+        3091,
+        3053,
+        3033
+      ]
+    },
+    {
+      "name": "Tryndamere",
+      "id": "tryndamere",
+      "coreItems": [
+        {
+          "itemId": 3153,
+          "slot": 1
+        },
+        {
+          "itemId": 3046,
+          "slot": 2
+        },
+        {
+          "itemId": 3031,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6675,
+        6676,
+        6672,
+        2512
+      ],
+      "slot5Items": [
+        3072,
+        2512,
+        6631,
+        2502
+      ],
+      "slot6Items": [
+        3143,
+        3033,
+        6672,
+        3053
+      ]
+    },
+    {
+      "name": "Twisted Fate",
+      "id": "twisted-fate",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 3094,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3100,
+        4646,
+        3089
+      ],
+      "slot5Items": [
+        4646,
+        3135,
+        3100,
+        3089
+      ],
+      "slot6Items": [
+        3089,
+        3135,
+        3157,
+        3100
+      ]
+    },
+    {
+      "name": "Twitch",
+      "id": "twitch",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 3032,
+          "slot": 2
+        },
+        {
+          "itemId": 3085,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3153,
+        3036,
+        2512
+      ],
+      "slot5Items": [
+        3036,
+        3153,
+        2512,
+        3033
+      ],
+      "slot6Items": [
+        3153,
+        3072,
+        2512,
+        6672
+      ]
+    },
+    {
+      "name": "Udyr",
+      "id": "udyr",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3047,
+          "slot": 2
+        },
+        {
+          "itemId": 2502,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3065,
+        3089,
+        3075,
+        6653
+      ],
+      "slot5Items": [
+        3089,
+        3119,
+        3075,
+        3135
+      ],
+      "slot6Items": [
+        6665,
+        3119,
+        6653,
+        3075
+      ]
+    },
+    {
+      "name": "Urgot",
+      "id": "urgot",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3748,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6665,
+        3075,
+        3071,
+        3053
+      ],
+      "slot5Items": [
+        2504,
+        3075,
+        3083,
+        3071
+      ],
+      "slot6Items": [
+        3065,
+        6333,
+        3053,
+        3083
+      ]
+    },
+    {
+      "name": "Varus",
+      "id": "varus",
+      "coreItems": [
+        {
+          "itemId": 6697,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 6676,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6694,
+        3004,
+        3153,
+        3814
+      ],
+      "slot5Items": [
+        3004,
+        3814,
+        3153,
+        3085
+      ],
+      "slot6Items": [
+        3031,
+        3814,
+        3085,
+        3142
+      ]
+    },
+    {
+      "name": "Vayne",
+      "id": "vayne",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 3153,
+          "slot": 2
+        },
+        {
+          "itemId": 3124,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3302,
+        3091,
+        6672,
+        6665
+      ],
+      "slot5Items": [
+        6665,
+        3031,
+        6672,
+        3072
+      ],
+      "slot6Items": [
+        3091,
+        3073,
+        3072,
+        3036
+      ]
+    },
+    {
+      "name": "Veigar",
+      "id": "veigar",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4645,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3003,
+        3089,
+        4646,
+        3135
+      ],
+      "slot5Items": [
+        3135,
+        3089,
+        3157,
+        4646
+      ],
+      "slot6Items": [
+        3089,
+        4646,
+        3157,
+        3119
+      ]
+    },
+    {
+      "name": "Vel'Koz",
+      "id": "velkoz",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4645,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3089,
+        6653,
+        4646,
+        4628
+      ],
+      "slot5Items": [
+        3135,
+        4646,
+        3157,
+        6653
+      ],
+      "slot6Items": [
+        3165,
+        3102,
+        3157,
+        3116
+      ]
+    },
+    {
+      "name": "Vex",
+      "id": "vex",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3157,
+        3089,
+        3135
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        3157,
+        3102
+      ],
+      "slot6Items": [
+        3157,
+        3102,
+        3165,
+        3137
+      ]
+    },
+    {
+      "name": "Vi",
+      "id": "vi",
+      "coreItems": [
+        {
+          "itemId": 6610,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6692,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3053,
+        3071,
+        3156
+      ],
+      "slot5Items": [
+        3071,
+        3156,
+        3053,
+        3031
+      ],
+      "slot6Items": [
+        3053,
+        3036,
+        3031,
+        6676
+      ]
+    },
+    {
+      "name": "Viego",
+      "id": "viego",
+      "coreItems": [
+        {
+          "itemId": 6610,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3153,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        6673,
+        3031,
+        3091
+      ],
+      "slot5Items": [
+        6673,
+        3091,
+        3031,
+        3036
+      ],
+      "slot6Items": [
+        3091,
+        3036,
+        3078,
+        3139
+      ]
+    },
+    {
+      "name": "Viktor",
+      "id": "viktor",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4645,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3089,
+        3135,
+        4646,
+        3157
+      ],
+      "slot5Items": [
+        3135,
+        3165,
+        3157,
+        6653
+      ],
+      "slot6Items": [
+        3157,
+        3100,
+        3102,
+        4646
+      ]
+    },
+    {
+      "name": "Vladimir",
+      "id": "vladimir",
+      "coreItems": [
+        {
+          "itemId": 3020,
+          "slot": 1
+        },
+        {
+          "itemId": 4633,
+          "slot": 2
+        },
+        {
+          "itemId": 4629,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3089,
+        3065,
+        6653,
+        4645
+      ],
+      "slot5Items": [
+        3065,
+        3157,
+        3135,
+        3165
+      ],
+      "slot6Items": [
+        3157,
+        4645,
+        3152,
+        3116
+      ]
+    },
+    {
+      "name": "Volibear",
+      "id": "volibear",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3065,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        2502,
+        3075,
+        3083,
+        6665
+      ],
+      "slot5Items": [
+        3083,
+        3075,
+        3110,
+        3119
+      ],
+      "slot6Items": [
+        3075,
+        6665,
+        2504,
+        3742
+      ]
+    },
+    {
+      "name": "Warwick",
+      "id": "warwick",
+      "coreItems": [
+        {
+          "itemId": 6610,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3153,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3065,
+        3075,
+        6333,
+        4401
+      ],
+      "slot5Items": [
+        3075,
+        6333,
+        3748,
+        3119
+      ],
+      "slot6Items": [
+        4645,
+        3004,
+        6333,
+        3084
+      ]
+    },
+    {
+      "name": "Wukong",
+      "id": "wukong",
+      "coreItems": [
+        {
+          "itemId": 6610,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3078,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3071,
+        3156,
+        3053
+      ],
+      "slot5Items": [
+        3071,
+        3053,
+        3156,
+        6692
+      ],
+      "slot6Items": [
+        3053,
+        2504,
+        6609,
+        3075
+      ]
+    },
+    {
+      "name": "Xayah",
+      "id": "xayah",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 3032,
+          "slot": 2
+        },
+        {
+          "itemId": 6675,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3036,
+        3072,
+        3153
+      ],
+      "slot5Items": [
+        3036,
+        3072,
+        3153,
+        3033
+      ],
+      "slot6Items": [
+        3072,
+        3153,
+        3156,
+        6676
+      ]
+    },
+    {
+      "name": "Xerath",
+      "id": "xerath",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4645,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3089,
+        4646,
+        4628,
+        3135
+      ],
+      "slot5Items": [
+        3135,
+        4646,
+        3003,
+        3165
+      ],
+      "slot6Items": [
+        6653,
+        4646,
+        3157,
+        3165
+      ]
+    },
+    {
+      "name": "Xin Zhao",
+      "id": "xin-zhao",
+      "coreItems": [
+        {
+          "itemId": 6610,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 6692,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        4633,
+        3053,
+        3153
+      ],
+      "slot5Items": [
+        3153,
+        3065,
+        3053,
+        4633
+      ],
+      "slot6Items": [
+        3065,
+        3091,
+        3053,
+        3146
+      ]
+    },
+    {
+      "name": "Yasuo",
+      "id": "yasuo",
+      "coreItems": [
+        {
+          "itemId": 3153,
+          "slot": 1
+        },
+        {
+          "itemId": 6673,
+          "slot": 2
+        },
+        {
+          "itemId": 3031,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3072,
+        6665,
+        3091,
+        6333
+      ],
+      "slot5Items": [
+        6333,
+        6665,
+        3091,
+        2504
+      ],
+      "slot6Items": [
+        3091,
+        6665,
+        2501,
+        3097
+      ]
+    },
+    {
+      "name": "Yone",
+      "id": "yone",
+      "coreItems": [
+        {
+          "itemId": 3153,
+          "slot": 1
+        },
+        {
+          "itemId": 6673,
+          "slot": 2
+        },
+        {
+          "itemId": 3031,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3072,
+        3091,
+        6665
+      ],
+      "slot5Items": [
+        3091,
+        6665,
+        3072,
+        3143
+      ],
+      "slot6Items": [
+        3143,
+        3032,
+        6665,
+        3072
+      ]
+    },
+    {
+      "name": "Yorick",
+      "id": "yorick",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3065,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        6662,
+        3161,
+        3143
+      ],
+      "slot5Items": [
+        6692,
+        3161,
+        3004,
+        3119
+      ],
+      "slot6Items": [
+        4401,
+        3161,
+        2502,
+        6694
+      ]
+    },
+    {
+      "name": "Yunara",
+      "id": "yunara",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 6672,
+          "slot": 2
+        },
+        {
+          "itemId": 2512,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3036,
+        3085,
+        3072
+      ],
+      "slot5Items": [
+        3036,
+        3033,
+        3153,
+        3072
+      ],
+      "slot6Items": [
+        3072,
+        6673,
+        3085,
+        3153
+      ]
+    },
+    {
+      "name": "Yuumi",
+      "id": "yuumi",
+      "coreItems": [
+        {
+          "itemId": 6617,
+          "slot": 1
+        },
+        {
+          "itemId": 3504,
+          "slot": 2
+        },
+        {
+          "itemId": 3222,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        2526,
+        3107,
+        6621,
+        3089
+      ],
+      "slot5Items": [
+        6621,
+        3107,
+        4005,
+        2503
+      ],
+      "slot6Items": [
+        4645,
+        3107,
+        4628,
+        3165
+      ]
+    },
+    {
+      "name": "Zaahen",
+      "id": "zaahen",
+      "coreItems": [
+        {
+          "itemId": 3078,
+          "slot": 1
+        },
+        {
+          "itemId": 6610,
+          "slot": 2
+        },
+        {
+          "itemId": 3111,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6333,
+        3065,
+        2517,
+        3161
+      ],
+      "slot5Items": [
+        3065,
+        2517,
+        3161,
+        3053
+      ],
+      "slot6Items": [
+        3161,
+        2517,
+        3072,
+        3084
+      ]
+    },
+    {
+      "name": "Zac",
+      "id": "zac",
+      "coreItems": [
+        {
+          "itemId": 3084,
+          "slot": 1
+        },
+        {
+          "itemId": 3111,
+          "slot": 2
+        },
+        {
+          "itemId": 3065,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3075,
+        2502,
+        3083,
+        2504
+      ],
+      "slot5Items": [
+        3083,
+        2502,
+        2504,
+        3068
+      ],
+      "slot6Items": [
+        3143,
+        4401,
+        3068,
+        2502
+      ]
+    },
+    {
+      "name": "Zed",
+      "id": "zed",
+      "coreItems": [
+        {
+          "itemId": 6697,
+          "slot": 1
+        },
+        {
+          "itemId": 3158,
+          "slot": 2
+        },
+        {
+          "itemId": 6696,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        6694,
+        6692,
+        3814,
+        6676
+      ],
+      "slot5Items": [
+        6699,
+        3814,
+        6692,
+        6695
+      ],
+      "slot6Items": [
+        3814,
+        3156,
+        6692,
+        6695
+      ]
+    },
+    {
+      "name": "Zeri",
+      "id": "zeri",
+      "coreItems": [
+        {
+          "itemId": 3006,
+          "slot": 1
+        },
+        {
+          "itemId": 3032,
+          "slot": 2
+        },
+        {
+          "itemId": 2512,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3031,
+        3036,
+        3085,
+        3072
+      ],
+      "slot5Items": [
+        3036,
+        3072,
+        6673,
+        3033
+      ],
+      "slot6Items": [
+        3072,
+        3085,
+        3073,
+        6673
+      ]
+    },
+    {
+      "name": "Ziggs",
+      "id": "ziggs",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        3089,
+        3165,
+        4646
+      ],
+      "slot5Items": [
+        3089,
+        3135,
+        3165,
+        3003
+      ],
+      "slot6Items": [
+        3135,
+        3003,
+        3165,
+        2503
+      ]
+    },
+    {
+      "name": "Zilean",
+      "id": "zilean",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        4645,
+        4628,
+        3003,
+        3165
+      ],
+      "slot5Items": [
+        3003,
+        4629,
+        3089,
+        3137
+      ],
+      "slot6Items": [
+        3137,
+        3089,
+        3157,
+        6653
+      ]
+    },
+    {
+      "name": "Zoe",
+      "id": "zoe",
+      "coreItems": [
+        {
+          "itemId": 6655,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 4646,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3089,
+        4645,
+        4628,
+        3135
+      ],
+      "slot5Items": [
+        3135,
+        4645,
+        4628,
+        3165
+      ],
+      "slot6Items": [
+        3157,
+        3102,
+        4628,
+        3100
+      ]
+    },
+    {
+      "name": "Zyra",
+      "id": "zyra",
+      "coreItems": [
+        {
+          "itemId": 2503,
+          "slot": 1
+        },
+        {
+          "itemId": 3020,
+          "slot": 2
+        },
+        {
+          "itemId": 6653,
+          "slot": 3
+        }
+      ],
+      "slot4Items": [
+        3116,
+        4645,
+        3165,
+        8010
+      ],
+      "slot5Items": [
+        4645,
+        3165,
+        3157,
+        3135
+      ],
+      "slot6Items": [
+        3089,
+        3003,
+        3118,
+        3165
+      ]
+    }
+  ]
+}
