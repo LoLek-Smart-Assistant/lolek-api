@@ -236,6 +236,66 @@
           }
         }
       }
+    },
+    "/voice/transcribe": {
+      "post": {
+        "description": "Transcribe uploaded audio and parse League of Legends terminology",
+        "tags": [
+          "Voice"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceTranscribeRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Transcript normalized and parsed successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceTranscribeResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing or invalid audio upload",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Whisper service unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Failed to transcribe or parse audio",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VoiceErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -811,6 +871,84 @@
             }
           }
         }
+      },
+      "VoiceIntent": {
+        "type": "string",
+        "enum": [
+          "enemy_build_update",
+          "recommendation_request"
+        ]
+      },
+      "ParsedVoiceCommand": {
+        "type": "object",
+        "properties": {
+          "intent": {
+            "$ref": "#/components/schemas/VoiceIntent"
+          },
+          "champion": {
+            "type": "string",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "intent"
+        ]
+      },
+      "VoiceTranscribeRequest": {
+        "type": "object",
+        "description": "Multipart upload containing one audio file. Accepted field names are audio, file, voice, and blob.",
+        "properties": {
+          "audio": {
+            "type": "string",
+            "format": "binary"
+          },
+          "file": {
+            "type": "string",
+            "format": "binary"
+          },
+          "voice": {
+            "type": "string",
+            "format": "binary"
+          },
+          "blob": {
+            "type": "string",
+            "format": "binary"
+          }
+        }
+      },
+      "VoiceTranscribeResponse": {
+        "type": "object",
+        "properties": {
+          "transcript": {
+            "type": "string",
+            "description": "Normalized transcript returned by the Whisper pipeline"
+          },
+          "parsed": {
+            "$ref": "#/components/schemas/ParsedVoiceCommand"
+          }
+        },
+        "required": [
+          "transcript",
+          "parsed"
+        ]
+      },
+      "VoiceErrorResponse": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "error"
+        ]
       }
     },
     "securitySchemes": {}
