@@ -1,0 +1,11 @@
+{
+  "custom_tags": [
+    "shield",
+    "anti_shield",
+    "percent_health_damage",
+    "anti_crit",
+    "anti_attack_speed",
+    "anti_healing",
+    "slow_resist"
+  ]
+}

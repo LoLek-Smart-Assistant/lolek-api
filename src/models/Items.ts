@@ -5,6 +5,7 @@ export interface IItem extends Document {
   itemId: string;
   itemName: string;
   tags: string[];
+  customTags?: string[] | null;
   image?: string | null;
 }
 
@@ -13,6 +14,7 @@ const itemSchema = new mongoose.Schema<IItem>({
   itemId: { type: String },
   itemName: { type: String },
   tags: { type: [String] },
+  customTags: { type: [String] },
   image: { type: String }
 });
 
