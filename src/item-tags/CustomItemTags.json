@@ -1,11 +1,24 @@
 {
   "custom_tags": [
-    "shield",
-    "anti_shield",
-    "percent_health_damage",
-    "anti_crit",
     "anti_attack_speed",
+    "anti_crit",
     "anti_healing",
-    "slow_resist"
+    "anti_shield",
+    "armor",
+    "armor_penetration",
+    "attack_speed",
+    "critical_strike",
+    "damage",
+    "health",
+    "health_regen",
+    "life_steal",
+    "magic_resist",
+    "magic_penetration",
+    "percent_health_damage",
+    "shield",
+    "slow",
+    "slow_resist",
+    "spell_damage",
+    "spell_vamp"
   ]
 }
