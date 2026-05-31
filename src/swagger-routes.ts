@@ -9,6 +9,8 @@
  *     description: League of Legends summoner information
  *   - name: Sync
  *     description: Data synchronization endpoints
+ *   - name: Matches
+ *     description: Played match persistence and history
  *   - name: Voice
  *     description: Voice transcription and League terminology parsing
  * components:
@@ -102,6 +104,108 @@
  *           type: string
  *           nullable: true
  *           description: Item image URL
+ *     PlayedMatchItem:
+ *       type: object
+ *       properties:
+ *         itemId:
+ *           type: string
+ *         itemName:
+ *           type: string
+ *         image:
+ *           type: string
+ *           nullable: true
+ *         customTags:
+ *           type: array
+ *           nullable: true
+ *           items:
+ *             type: string
+ *         slot:
+ *           type: integer
+ *           nullable: true
+ *     PlayedMatchPlayer:
+ *       type: object
+ *       properties:
+ *         summonerName:
+ *           type: string
+ *         riotId:
+ *           type: string
+ *           nullable: true
+ *         championName:
+ *           type: string
+ *         championId:
+ *           oneOf:
+ *             - type: string
+ *             - type: integer
+ *           nullable: true
+ *         role:
+ *           type: string
+ *           nullable: true
+ *         teamPosition:
+ *           type: string
+ *           nullable: true
+ *         items:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/PlayedMatchItem'
+ *         kills:
+ *           type: integer
+ *           nullable: true
+ *         deaths:
+ *           type: integer
+ *           nullable: true
+ *         assists:
+ *           type: integer
+ *           nullable: true
+ *         level:
+ *           type: integer
+ *           nullable: true
+ *     PlayedMatchTeam:
+ *       type: object
+ *       properties:
+ *         teamId:
+ *           type: string
+ *         name:
+ *           type: string
+ *           nullable: true
+ *         won:
+ *           type: boolean
+ *         players:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/PlayedMatchPlayer'
+ *     PlayedMatch:
+ *       type: object
+ *       properties:
+ *         _id:
+ *           type: string
+ *         matchId:
+ *           type: string
+ *         userId:
+ *           type: string
+ *         source:
+ *           type: string
+ *           enum: [live, manual]
+ *         gameMode:
+ *           type: string
+ *         queue:
+ *           type: string
+ *           nullable: true
+ *         durationSeconds:
+ *           type: integer
+ *         startedAt:
+ *           type: string
+ *           format: date-time
+ *           nullable: true
+ *         endedAt:
+ *           type: string
+ *           format: date-time
+ *           nullable: true
+ *         winnerTeamId:
+ *           type: string
+ *         teams:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/PlayedMatchTeam'
  *     SignInRequest:
  *       type: object
  *       properties:
@@ -620,6 +724,74 @@
  *                                     type: string
  *       400:
  *         description: Missing champion query values
+ *
+ * /played-matches:
+ *   get:
+ *     tags:
+ *       - Matches
+ *     summary: List played matches for the authenticated user
+ *     responses:
+ *       200:
+ *         description: Played matches returned successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 matches:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/PlayedMatch'
+ *   post:
+ *     tags:
+ *       - Matches
+ *     summary: Save a finished or manually drafted match
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *     responses:
+ *       201:
+ *         description: Match saved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 match:
+ *                   $ref: '#/components/schemas/PlayedMatch'
+ *       400:
+ *         description: Invalid match payload
+ *       401:
+ *         description: Unauthorized
+ *
+ * /played-matches/{matchId}:
+ *   get:
+ *     tags:
+ *       - Matches
+ *     summary: Get one played match by matchId
+ *     parameters:
+ *       - name: matchId
+ *         in: path
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Played match returned successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 match:
+ *                   $ref: '#/components/schemas/PlayedMatch'
+ *       404:
+ *         description: Match not found
+ *       401:
+ *         description: Unauthorized
  *
  * /syncData:
  *   post:

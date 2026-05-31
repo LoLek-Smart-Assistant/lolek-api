@@ -1,6 +1,11 @@
 import { Router } from 'express';
 import { getAccount, getSpectatorByPuuid } from '../controllers/summonerController';
 import { getItems, getMayhemSuggestedItems } from '../controllers/itemsController';
+import {
+	getPlayedMatchById,
+	getPlayedMatches,
+	savePlayedMatch,
+} from '../controllers/playedMatchController';
 import { syncDataHandler } from '../controllers/syncController';
 import {logIn, logOut, refresh, signIn} from "../controllers/authController";
 import {authMiddleware} from "../middleware/authMiddleware";
@@ -28,6 +33,11 @@ router.get('/live-game/:platform/:puuid', getSpectatorByPuuid);
 // Items
 router.get('/items', getItems);
 router.get('/mayhem-suggested-items', getMayhemSuggestedItems);
+
+// Played matches
+router.get('/played-matches', authMiddleware, getPlayedMatches);
+router.get('/played-matches/:matchId', authMiddleware, getPlayedMatchById);
+router.post('/played-matches', authMiddleware, savePlayedMatch);
 
 // Voice transcription
 router.post('/voice/transcribe', voiceUploadMiddleware, transcribeVoice);
