@@ -1,5 +1,6 @@
 import riot from '../lib/riotClient';
 import Champion from '../models/Champion';
+import { normalizePlatformCode } from '../lib/riotClient';
 
 export type PlatformRegion = 'europe' | 'americas' | 'asia';
 
@@ -36,7 +37,7 @@ const accountNameCache = new Map<string, { expiresAt: number; name: string | nul
 const pendingAccountNameRequests = new Map<string, Promise<string | null>>();
 
 export function platformToRegion(platform: string): PlatformRegion {
-  const p = (platform || '').toUpperCase();
+  const p = normalizePlatformCode(platform);
   if (['EUW1', 'EUN1', 'TR1', 'RU'].includes(p)) return 'europe';
   if (['NA1', 'BR1', 'LA1', 'LA2', 'OC1'].includes(p)) return 'americas';
   return 'asia';

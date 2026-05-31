@@ -1,3 +1,4 @@
+import { normalizePlatformCode } from '../lib/riotClient';
 import { Request, Response } from 'express';
 import { getUserProfile, updateUserRiotProfile } from '../services/authService';
 import riot from '../lib/riotClient';
@@ -65,8 +66,10 @@ export async function linkRiotProfile(req: Request, res: Response) {
             return res.status(400).json({ error: 'riotName, riotTag, and platform are required.' });
         }
 
+            const normalizedPlatform = normalizePlatformCode(String(platform));
+
         const account = await riot.getAccount(riotName, riotTag);
-        const updated = await updateUserRiotProfile(userId, riotName, riotTag, account.puuid, platform);
+            const updated = await updateUserRiotProfile(userId, riotName, riotTag, account.puuid, normalizedPlatform);
 
         if (!updated) {
             return res.status(404).json({ error: 'User not found' });

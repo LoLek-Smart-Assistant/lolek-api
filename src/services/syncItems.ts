@@ -7,18 +7,48 @@ export default async function syncItems(version: string): Promise<void> {
   const items = await response.json();
   if (!items.data) throw new Error('Invalid item JSON: missing data field');
 
-  const itemData = Object.entries(items.data).map(([itemId, item]: [string, any]) => ({
-    version,
-    itemId,
-    itemName: item.name,
-    tags: item.tags,
-    image: `/assets/items/${version}/${itemId}.png`
-  }));
+  const itemData = Object.entries(items.data)
+    .map(([itemId, item]: [string, any]) => {
+      const tags = Array.isArray(item.tags) ? item.tags : [];
+      const isBoots = tags.includes('Boots');
+      const goldTotal = Number(item.gold?.total ?? 0);
+      const isPurchasable = Boolean(item.gold?.purchasable);
+      const isActiveItem = item.inStore !== false && item.hideFromAll !== true && !item.requiredChampion;
+      const isCompletedItem =
+        isPurchasable &&
+        goldTotal >= 1000 &&
+        !tags.includes('Lane') &&
+        !tags.includes('Trinket') &&
+        !tags.includes('Consumable');
 
-  const ops = itemData.map((doc) => ({
-    updateOne: {
-      filter: { itemId: doc.itemId },
-      update: { $set: doc },
+      return isActiveItem && (isBoots || isCompletedItem)
+        ? {
+            version,
+            itemId,
+            itemName: item.name,
+            tags: item.tags,
+            image: `/assets/items/${version}/${itemId}.png`
+          }
+        : null;
+    })
+    .filter((item): item is { version: string; itemId: string; itemName: string; tags: string[]; image: string } => item !== null);
+
+  const seenItemNames = new Set<string>();
+  const dedupedItemData = itemData.filter((doc) => {
+    const normalizedName = doc.itemName.trim().toLowerCase();
+    if (seenItemNames.has(normalizedName)) return false;
+    seenItemNames.add(normalizedName);
+    return true;
+  });
+
+  const keptItemIds = new Set(dedupedItemData.map((doc) => doc.itemId));
+
+  await Item.deleteMany({ version, itemId: { $nin: [...keptItemIds] } });
+
+  const ops: any[] = dedupedItemData.map((doc) => ({
+    replaceOne: {
+      filter: { version: doc.version, itemId: doc.itemId },
+      replacement: doc,
       upsert: true
     }
   }));

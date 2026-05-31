@@ -101,7 +101,7 @@ export async function savePlayedMatch(req: Request, res: Response) {
           userId,
         },
       },
-      { upsert: true, new: true, setDefaultsOnInsert: true },
+      { upsert: true, returnDocument: 'after', setDefaultsOnInsert: true },
     ).select('-__v');
 
     return res.status(201).json({ match });

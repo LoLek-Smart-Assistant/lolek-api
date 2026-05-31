@@ -11,9 +11,27 @@ const riot = axios.create({
   timeout: 10000,
 });
 
+const PLATFORM_ALIASES: Record<string, string> = {
+  EUNE: 'EUN1',
+  EUN: 'EUN1',
+  EUW: 'EUW1',
+  NA: 'NA1',
+  BR: 'BR1',
+  LAN: 'LA1',
+  LAS: 'LA2',
+  OCE: 'OC1',
+  JP: 'JP1'
+};
+
+export function normalizePlatformCode(platform: string) {
+  const code = (platform || '').trim().toUpperCase();
+  return PLATFORM_ALIASES[code] || code;
+}
+
 function platformBase(platform: string) {
   if (!platform) throw new Error('platform required (e.g. EUW1, NA1, KR)');
-  return `https://${platform.toLowerCase()}.api.riotgames.com`;
+  const normalized = normalizePlatformCode(platform);
+  return `https://${normalized.toLowerCase()}.api.riotgames.com`;
 }
 
 const regionalBase: Record<string, string> = {
