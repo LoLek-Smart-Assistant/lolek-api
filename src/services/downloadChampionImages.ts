@@ -24,6 +24,12 @@ function ddragonChampionImageUrl(version: string, image: string) {
   return `https://ddragon.leagueoflegends.com/cdn/${encodeURIComponent(version)}/img/champion/${encodeURIComponent(image)}`;
 }
 
+function imageFileName(image: string) {
+  return image.startsWith(CHAMPION_ASSET_ROUTE)
+    ? path.basename(image)
+    : image;
+}
+
 export default async function downloadChampionImages(): Promise<DownloadChampionImagesResult> {
   const champions = await Champion.find().select('version championId image').lean();
   const result: DownloadChampionImagesResult = {
@@ -36,9 +42,10 @@ export default async function downloadChampionImages(): Promise<DownloadChampion
   for (const champion of champions) {
     const version = typeof champion.version === 'string' ? champion.version.trim() : '';
     const championId = typeof champion.championId === 'string' ? champion.championId.trim() : '';
-    const image = typeof champion.image === 'string' ? champion.image.trim() : '';
+    const storedImage = typeof champion.image === 'string' ? champion.image.trim() : '';
+    const image = imageFileName(storedImage);
 
-    if (!version || !championId || !image || image.startsWith(CHAMPION_ASSET_ROUTE)) {
+    if (!version || !championId || !image) {
       result.skipped += 1;
       continue;
     }

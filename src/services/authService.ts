@@ -51,3 +51,16 @@ export async function updateUserRiotProfile(userId: string, riotName: string, ri
         { new: true }
     ).select('-password -refreshToken');
 }
+
+export async function removeUserRiotProfile(userId: string) {
+    return User.findByIdAndUpdate(
+        userId,
+        { $unset: { riotName: 1, riotTag: 1, puuid: 1, platform: 1 } },
+        { new: true }
+    ).select('-password -refreshToken');
+}
+
+export async function deleteUser(userId: string) {
+    const res = await User.findByIdAndDelete(userId);
+    return res;
+}

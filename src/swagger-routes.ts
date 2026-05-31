@@ -379,6 +379,50 @@
  *       404:
  *         description: Riot account not found
  *
+ * /user/remove-riot-profile:
+ *   post:
+ *     tags:
+ *       - User
+ *     summary: Remove linked Riot account from user profile
+ *     responses:
+ *       200:
+ *         description: Riot account removed successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Riot profile removed.
+ *                 user:
+ *                   $ref: '#/components/schemas/User'
+ *       401:
+ *         description: Unauthorized
+ *       404:
+ *         description: User not found
+ *
+ * /user:
+ *   delete:
+ *     tags:
+ *       - User
+ *     summary: Delete the current user account
+ *     responses:
+ *       200:
+ *         description: User deleted successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: User deleted.
+ *       401:
+ *         description: Unauthorized
+ *       404:
+ *         description: User not found
+ *
  * /riot-account/{gameName}/{tagLine}:
  *   get:
  *     tags:
@@ -430,6 +474,152 @@
  *           application/json:
  *             schema:
  *               type: object
+ *
+ * /mayhem-suggested-items:
+ *   get:
+ *     tags:
+ *       - Summoner
+ *     summary: Get Mayhem suggested items for one or more champions
+ *     description: Provide champion names with either champions=Ahri,Jinx or repeated champion query params.
+ *     parameters:
+ *       - name: champions
+ *         in: query
+ *         required: false
+ *         description: Comma-separated champion names
+ *         schema:
+ *           type: string
+ *           example: Ahri,Jinx
+ *       - name: champion
+ *         in: query
+ *         required: false
+ *         description: Repeated champion query parameter
+ *         schema:
+ *           type: string
+ *           example: Ahri
+ *     responses:
+ *       200:
+ *         description: Mayhem suggested items grouped by champion
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 requestedChampions:
+ *                   type: array
+ *                   items:
+ *                     type: string
+ *                 foundCount:
+ *                   type: integer
+ *                 notFoundChampions:
+ *                   type: array
+ *                   items:
+ *                     type: string
+ *                 results:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       championName:
+ *                         type: string
+ *                       championId:
+ *                         type: string
+ *                       version:
+ *                         type: string
+ *                       coreItems:
+ *                         type: array
+ *                         items:
+ *                           type: object
+ *                           properties:
+ *                             itemId:
+ *                               type: integer
+ *                             itemName:
+ *                               type: string
+ *                               nullable: true
+ *                             image:
+ *                               type: string
+ *                               nullable: true
+ *                             customTags:
+ *                               type: array
+ *                               nullable: true
+ *                               items:
+ *                                 type: string
+ *                       suggestedItems:
+ *                         type: object
+ *                         properties:
+ *                           slot4Items:
+ *                             type: array
+ *                             items:
+ *                               type: object
+ *                               properties:
+ *                                 itemId:
+ *                                   type: integer
+ *                                 itemName:
+ *                                   type: string
+ *                                   nullable: true
+ *                                 image:
+ *                                   type: string
+ *                                   nullable: true
+ *                                 customTags:
+ *                                   type: array
+ *                                   nullable: true
+ *                                   items:
+ *                                     type: string
+ *                           slot5Items:
+ *                             type: array
+ *                             items:
+ *                               type: object
+ *                               properties:
+ *                                 itemId:
+ *                                   type: integer
+ *                                 itemName:
+ *                                   type: string
+ *                                   nullable: true
+ *                                 image:
+ *                                   type: string
+ *                                   nullable: true
+ *                                 customTags:
+ *                                   type: array
+ *                                   nullable: true
+ *                                   items:
+ *                                     type: string
+ *                           slot6Items:
+ *                             type: array
+ *                             items:
+ *                               type: object
+ *                               properties:
+ *                                 itemId:
+ *                                   type: integer
+ *                                 itemName:
+ *                                   type: string
+ *                                   nullable: true
+ *                                 image:
+ *                                   type: string
+ *                                   nullable: true
+ *                                 customTags:
+ *                                   type: array
+ *                                   nullable: true
+ *                                   items:
+ *                                     type: string
+ *                           allItems:
+ *                             type: array
+ *                             items:
+ *                               type: object
+ *                               properties:
+ *                                 itemId:
+ *                                   type: integer
+ *                                 itemName:
+ *                                   type: string
+ *                                   nullable: true
+ *                                 image:
+ *                                   type: string
+ *                                   nullable: true
+ *                                 customTags:
+ *                                   type: array
+ *                                   nullable: true
+ *                                   items:
+ *                                     type: string
+ *       400:
+ *         description: Missing champion query values
  *
  * /syncData:
  *   post:

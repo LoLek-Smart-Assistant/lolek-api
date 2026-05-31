@@ -18,7 +18,7 @@ export default async function syncChampions(version: string): Promise<void> {
 
   const ops = championData.map((doc) => ({
     updateOne: {
-      filter: { version: doc.version, championId: doc.championId },
+      filter: { championId: doc.championId },
       update: { $set: doc },
       upsert: true
     }
@@ -30,4 +30,3 @@ export default async function syncChampions(version: string): Promise<void> {
       `Upserted: ${result.upsertedCount ?? 0}, Modified: ${result.modifiedCount ?? 0}.`
   );
 }
-

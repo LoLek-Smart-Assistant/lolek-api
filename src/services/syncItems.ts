@@ -17,7 +17,7 @@ export default async function syncItems(version: string): Promise<void> {
 
   const ops = itemData.map((doc) => ({
     updateOne: {
-      filter: { version: doc.version, itemId: doc.itemId },
+      filter: { itemId: doc.itemId },
       update: { $set: doc },
       upsert: true
     }
@@ -29,4 +29,3 @@ export default async function syncItems(version: string): Promise<void> {
       `Upserted: ${result.upsertedCount ?? 0}, Modified: ${result.modifiedCount ?? 0}.`
   );
 }
-

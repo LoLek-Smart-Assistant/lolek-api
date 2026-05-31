@@ -9,6 +9,7 @@
     "download:champion-images": "ts-node src/bin/downloadChampionImages.ts",
     "download:item-images": "ts-node src/bin/downloadItemImages.ts",
     "build:item-tags": "ts-node src/item-tags/buildItemTagCounters.ts",
+    "apply:item-tags": "ts-node src/item-tags/applyItemTagsFromJson.ts",
     "sync:mayhem:core-items": "ts-node src/bin/syncMayhemCoreItems.ts",
     "scrape:mayhem:builds": "ts-node src/scraper/scrapeMayhemChampion.ts",
     "scrape:mayhem:list": "ts-node src/scraper/scrapeMayhemChampions.ts"

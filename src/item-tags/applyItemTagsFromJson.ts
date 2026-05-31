@@ -26,7 +26,7 @@
  *  - The script uses your project's `connectDB()` (src/mongoDB/db.ts).
  *  - Matching: first tries case-insensitive exact match on itemName, then
  *    falls back to case-insensitive partial match.
- *  - Existing `customTags` are preserved and merged (duplicates removed).
+ *  - Existing `customTags` are replaced by mapping tags.
  */
 
 const PathToItemTags = ".\\src\\item-tags\\item-tags.json";
@@ -116,6 +116,7 @@ async function main() {
     let applied = 0;
     let notFound = 0;
     let errors = 0;
+    const notFoundItems: string[] = [];
 
     for (const entry of mappings) {
         try {
@@ -128,6 +129,7 @@ async function main() {
             const item = await findItemByName(entry.itemName);
             if (!item) {
                 console.warn(`Item not found: ${entry.itemName}`);
+                notFoundItems.push(entry.itemName);
                 notFound++;
                 continue;
             }
@@ -136,14 +138,12 @@ async function main() {
                 ? item.customTags
                 : [];
 
-            const merged = Array.from(
-                new Set([...existing.map(String), ...tags])
-            );
+            const merged = Array.from(new Set(tags.map(String)));
 
             console.log(`Item: ${item.itemName} (id=${item.itemId || 'n/a'})`);
-            console.log('  existing:', existing);
+            console.log('  existing customTags:', existing);
             console.log('  add   :', tags);
-            console.log('  merged:', merged);
+            console.log('  customTags:', merged);
 
             item.customTags = merged;
             await item.save();
@@ -160,6 +160,12 @@ async function main() {
 
     console.log('Finished.');
     console.log(`applied=${applied}, notFound=${notFound}, errors=${errors}`);
+    if (notFoundItems.length > 0) {
+        console.log('Not found item names:');
+        for (const itemName of notFoundItems) {
+            console.log(`- ${itemName}`);
+        }
+    }
     process.exit(0);
 }
 
