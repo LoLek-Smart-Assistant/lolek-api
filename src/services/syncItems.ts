@@ -1,5 +1,6 @@
 import Item from '../models/Items';
 
+
 export default async function syncItems(version: string): Promise<void> {
   const url = `https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/item.json`;
   const response = await fetch(url);
@@ -26,12 +27,24 @@ export default async function syncItems(version: string): Promise<void> {
             version,
             itemId,
             itemName: item.name,
+            description: item.plaintext || null,
             tags: item.tags,
             image: `/assets/items/${version}/${itemId}.png`
           }
         : null;
     })
-    .filter((item): item is { version: string; itemId: string; itemName: string; tags: string[]; image: string } => item !== null);
+    .filter(
+      (
+        item,
+      ): item is {
+        version: string;
+        itemId: string;
+        itemName: string;
+        description: string | null;
+        tags: string[];
+        image: string;
+      } => item !== null,
+    );
 
   const seenItemNames = new Set<string>();
   const dedupedItemData = itemData.filter((doc) => {

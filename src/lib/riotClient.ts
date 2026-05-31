@@ -20,7 +20,10 @@ const PLATFORM_ALIASES: Record<string, string> = {
   LAN: 'LA1',
   LAS: 'LA2',
   OCE: 'OC1',
-  JP: 'JP1'
+  JP: 'JP1',
+  TR: 'TR1',
+  RU: 'RU',
+  KR: 'KR'
 };
 
 export function normalizePlatformCode(platform: string) {

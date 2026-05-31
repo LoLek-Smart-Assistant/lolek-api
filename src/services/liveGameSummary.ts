@@ -38,8 +38,11 @@ const pendingAccountNameRequests = new Map<string, Promise<string | null>>();
 
 export function platformToRegion(platform: string): PlatformRegion {
   const p = normalizePlatformCode(platform);
-  if (['EUW1', 'EUN1', 'TR1', 'RU'].includes(p)) return 'europe';
-  if (['NA1', 'BR1', 'LA1', 'LA2', 'OC1'].includes(p)) return 'americas';
+  // Ensure we cover both digit and non-digit forms where applicable
+  const europe = new Set(['EUW1', 'EUN1', 'TR1', 'RU', 'RU1']);
+  const americas = new Set(['NA1', 'BR1', 'LA1', 'LA2', 'OC1']);
+  if (europe.has(p)) return 'europe';
+  if (americas.has(p)) return 'americas';
   return 'asia';
 }
 
