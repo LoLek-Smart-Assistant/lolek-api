@@ -2,7 +2,6 @@ import { Router } from 'express';
 import { getAccount, getSpectatorByPuuid } from '../controllers/summonerController';
 import { getItems, getMayhemSuggestedItems } from '../controllers/itemsController';
 import {
-	getPlayedMatchById,
 	getPlayedMatches,
 	savePlayedMatch,
 } from '../controllers/playedMatchController';
@@ -34,10 +33,10 @@ router.get('/live-game/:platform/:puuid', getSpectatorByPuuid);
 router.get('/items', getItems);
 router.get('/mayhem-suggested-items', getMayhemSuggestedItems);
 
-// Played matches
+// Played matches (protected)
 router.get('/played-matches', authMiddleware, getPlayedMatches);
-router.get('/played-matches/:matchId', authMiddleware, getPlayedMatchById);
 router.post('/played-matches', authMiddleware, savePlayedMatch);
+
 
 // Voice transcription
 router.post('/voice/transcribe', voiceUploadMiddleware, transcribeVoice);

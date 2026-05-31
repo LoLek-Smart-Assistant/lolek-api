@@ -34,6 +34,8 @@ export type PlayedMatchTeam = {
 export interface IPlayedMatch extends Document {
   matchId: string;
   userId: mongoose.Types.ObjectId;
+  myTeamId?: string | null;
+  didWin?: boolean | null;
   source: PlayedMatchSource;
   gameMode: string;
   queue?: string | null;
@@ -88,6 +90,8 @@ const playedMatchSchema = new mongoose.Schema<IPlayedMatch>(
   {
     matchId: { type: String, required: true },
     userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    myTeamId: { type: String, default: null },
+    didWin: { type: Boolean, default: null },
     source: { type: String, enum: ['live', 'manual'], required: true },
     gameMode: { type: String, required: true },
     queue: { type: String, default: null },

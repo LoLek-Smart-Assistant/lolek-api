@@ -206,6 +206,35 @@
  *           type: array
  *           items:
  *             $ref: '#/components/schemas/PlayedMatchTeam'
+ *     PlayedMatchSyncRequest:
+ *       type: object
+ *       properties:
+ *         count:
+ *           type: integer
+ *           minimum: 1
+ *           maximum: 100
+ *           description: Number of latest matches to fetch from Riot API (defaults to 20)
+ *     PlayedMatchSyncResponse:
+ *       type: object
+ *       properties:
+ *         synced:
+ *           type: integer
+ *           description: Number of matches inserted or updated in DB
+ *         requested:
+ *           type: integer
+ *           description: Count requested for sync
+ *         totalFetchedIds:
+ *           type: integer
+ *           description: Number of match IDs returned by Riot API
+ *         matches:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/PlayedMatch'
+ *     PlayedMatchErrorResponse:
+ *       type: object
+ *       properties:
+ *         error:
+ *           type: string
  *     SignInRequest:
  *       type: object
  *       properties:
@@ -729,7 +758,7 @@
  *   get:
  *     tags:
  *       - Matches
- *     summary: List played matches for the authenticated user
+ *     summary: List saved played matches from DB for the authenticated user
  *     responses:
  *       200:
  *         description: Played matches returned successfully
@@ -742,56 +771,47 @@
  *                   type: array
  *                   items:
  *                     $ref: '#/components/schemas/PlayedMatch'
+ *       401:
+ *         description: Unauthorized
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/PlayedMatchErrorResponse'
+ *       500:
+ *         description: Failed to load played matches
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/PlayedMatchErrorResponse'
  *   post:
  *     tags:
  *       - Matches
- *     summary: Save a finished or manually drafted match
+ *     summary: Fetch Riot match history, upsert into DB, and return saved matches for the authenticated user
  *     requestBody:
- *       required: true
+ *       required: false
  *       content:
  *         application/json:
  *           schema:
- *             type: object
+ *             $ref: '#/components/schemas/PlayedMatchSyncRequest'
  *     responses:
  *       201:
- *         description: Match saved successfully
+ *         description: Match history synced successfully
  *         content:
  *           application/json:
  *             schema:
- *               type: object
- *               properties:
- *                 match:
- *                   $ref: '#/components/schemas/PlayedMatch'
+ *               $ref: '#/components/schemas/PlayedMatchSyncResponse'
  *       400:
- *         description: Invalid match payload
- *       401:
- *         description: Unauthorized
- *
- * /played-matches/{matchId}:
- *   get:
- *     tags:
- *       - Matches
- *     summary: Get one played match by matchId
- *     parameters:
- *       - name: matchId
- *         in: path
- *         required: true
- *         schema:
- *           type: string
- *     responses:
- *       200:
- *         description: Played match returned successfully
+ *         description: Invalid request or Riot profile not linked
  *         content:
  *           application/json:
  *             schema:
- *               type: object
- *               properties:
- *                 match:
- *                   $ref: '#/components/schemas/PlayedMatch'
- *       404:
- *         description: Match not found
+ *               $ref: '#/components/schemas/PlayedMatchErrorResponse'
  *       401:
  *         description: Unauthorized
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/PlayedMatchErrorResponse'
  *
  * /syncData:
  *   post:

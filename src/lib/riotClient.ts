@@ -3,11 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const API_KEY = process.env.RIOT_API_KEY;
-if (!API_KEY) console.warn('No API key found for RIOT_API_KEY');
-
 const riot = axios.create({
-  headers: { 'X-Riot-Token': API_KEY || '' },
   timeout: 10000,
 });
 
@@ -31,6 +27,14 @@ export function normalizePlatformCode(platform: string) {
   return PLATFORM_ALIASES[code] || code;
 }
 
+function getApiKey() {
+  const key = process.env.RIOT_API_KEY?.trim();
+  if (!key) {
+    throw new Error('RIOT_API_KEY is missing. Set it in environment before calling Riot API.');
+  }
+  return key;
+}
+
 function platformBase(platform: string) {
   if (!platform) throw new Error('platform required (e.g. EUW1, NA1, KR)');
   const normalized = normalizePlatformCode(platform);
@@ -44,8 +48,11 @@ const regionalBase: Record<string, string> = {
 };
 
 async function request<T = any>(url: string) {
+  const apiKey = getApiKey();
   try {
-    const res = await riot.get<T>(url);
+    const res = await riot.get<T>(url, {
+      headers: { 'X-Riot-Token': apiKey },
+    });
     return res.data;
   } catch (err: any) {
     const e = new Error(err.message);
@@ -78,5 +85,40 @@ export async function spectator(platform: string, encryptedSummonerId: string) {
   return request(url);
 }
 
-export default { getAccount, getAccountByPUUID, getSummonerByPUUID, spectator };
+export async function getMatchIdsByPUUID(
+  puuid: string,
+  region = 'europe',
+  options?: { start?: number; count?: number; queue?: number; type?: string; startTime?: number; endTime?: number },
+) {
+  const base = regionalBase[region] || regionalBase.europe;
+  const query = new URLSearchParams();
+
+  if (typeof options?.start === 'number') query.set('start', String(options.start));
+  if (typeof options?.count === 'number') query.set('count', String(options.count));
+  if (typeof options?.queue === 'number') query.set('queue', String(options.queue));
+  if (typeof options?.type === 'string' && options.type.trim()) query.set('type', options.type.trim());
+  if (typeof options?.startTime === 'number') query.set('startTime', String(options.startTime));
+  if (typeof options?.endTime === 'number') query.set('endTime', String(options.endTime));
+
+  const qs = query.toString();
+  const url = `${base}/lol/match/v5/matches/by-puuid/${encodeURIComponent(puuid)}/ids${qs ? `?${qs}` : ''}`;
+  const matchIds = await request<string[]>(url);
+  console.log('getMatchIdsByPUUID output:', matchIds);
+  return matchIds;
+}
+
+export async function getMatchById(matchId: string, region = 'europe') {
+  const base = regionalBase[region] || regionalBase.europe;
+  const url = `${base}/lol/match/v5/matches/${encodeURIComponent(matchId)}`;
+  return request(url);
+}
+
+export default {
+  getAccount,
+  getAccountByPUUID,
+  getSummonerByPUUID,
+  spectator,
+  getMatchIdsByPUUID,
+  getMatchById,
+};
 
