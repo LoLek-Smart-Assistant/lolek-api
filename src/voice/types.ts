@@ -1,4 +1,4 @@
-export type VoiceIntent = 'enemy_build_update' | 'recommendation_request';
+export type VoiceIntent = 'enemy_build_update' | 'enemy_build_remove' | 'recommendation_request';
 
 export interface ParsedVoiceCommand {
   intent: VoiceIntent;

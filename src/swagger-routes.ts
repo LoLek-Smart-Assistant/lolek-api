@@ -320,6 +320,7 @@
  *       type: string
  *       enum:
  *         - enemy_build_update
+ *         - enemy_build_remove
  *         - recommendation_request
  *     ParsedVoiceCommand:
  *       type: object

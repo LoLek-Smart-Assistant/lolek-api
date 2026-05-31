@@ -1,6 +1,7 @@
 import { randomUUID } from 'crypto';
 import { Request, Response } from 'express';
 import PlayedMatch from '../models/PlayedMatch';
+import Item from '../models/Items';
 import User from '../models/User';
 import riot from '../lib/riotClient';
 
@@ -16,7 +17,43 @@ function regionFromPlatform(platform: string): 'europe' | 'americas' | 'asia' {
   return 'europe';
 }
 
-function toPlayedMatchFromRiotMatch(riotMatch: any, myPuuid: string) {
+type ItemLookup = Map<string, { itemName: string; image: string | null; customTags: string[] }>;
+
+function collectItemIds(riotMatches: any[]): string[] {
+  const ids = new Set<string>();
+  for (const riotMatch of riotMatches) {
+    const participants = Array.isArray(riotMatch?.info?.participants) ? riotMatch.info.participants : [];
+    for (const participant of participants) {
+      for (const slot of [0, 1, 2, 3, 4, 5, 6]) {
+        const rawItemId = typeof participant?.[`item${slot}`] === 'number' ? participant[`item${slot}`] : 0;
+        if (rawItemId > 0) ids.add(String(rawItemId));
+      }
+    }
+  }
+  return Array.from(ids);
+}
+
+async function buildItemLookupFromDb(ids: string[]): Promise<ItemLookup> {
+  const itemLookup: ItemLookup = new Map();
+  if (ids.length === 0) return itemLookup;
+
+  const dbItems = await Item.find({ itemId: { $in: ids } })
+    .select('itemId itemName image customTags -_id')
+    .lean();
+
+  for (const dbItem of dbItems) {
+    const key = normalizeString((dbItem as any).itemId);
+    if (!key) continue;
+    itemLookup.set(key, {
+      itemName: normalizeString((dbItem as any).itemName) || key,
+      image: typeof (dbItem as any).image === 'string' ? (dbItem as any).image : null,
+      customTags: Array.isArray((dbItem as any).customTags) ? (dbItem as any).customTags : [],
+    });
+  }
+  return itemLookup;
+}
+
+function toPlayedMatchFromRiotMatch(riotMatch: any, myPuuid: string, itemLookup: ItemLookup) {
   const metadata = riotMatch?.metadata || {};
   const info = riotMatch?.info || {};
   const participants = Array.isArray(info?.participants) ? info.participants : [];
@@ -58,13 +95,19 @@ function toPlayedMatchFromRiotMatch(riotMatch: any, myPuuid: string) {
             rawItemId: typeof player?.[`item${slot}`] === 'number' ? player[`item${slot}`] : 0,
           }))
           .filter((item) => item.rawItemId > 0)
-          .map((item) => ({
-            itemId: String(item.rawItemId),
-            itemName: String(item.rawItemId),
-            image: null,
-            customTags: [],
-            slot: item.slot,
-          })),
+          .map((item) => {
+            const itemId = String(item.rawItemId);
+            const itemMeta = itemLookup.get(itemId);
+            if (!itemMeta) return null;
+            return {
+              itemId,
+              itemName: itemMeta.itemName,
+              image: itemMeta.image,
+              customTags: itemMeta.customTags,
+              slot: item.slot,
+            };
+          })
+          .filter((item): item is NonNullable<typeof item> => item !== null),
         kills: typeof player?.kills === 'number' ? player.kills : null,
         deaths: typeof player?.deaths === 'number' ? player.deaths : null,
         assists: typeof player?.assists === 'number' ? player.assists : null,
@@ -132,11 +175,16 @@ export async function savePlayedMatch(req: Request, res: Response) {
 
     const docsToUpsert = results
       .filter((result): result is PromiseFulfilledResult<any> => result.status === 'fulfilled')
-      .map((result) => toPlayedMatchFromRiotMatch(result.value, userPuuid));
+      .map((result) => result.value);
+
+    const itemIds = collectItemIds(docsToUpsert);
+    const itemLookup = await buildItemLookupFromDb(itemIds);
+
+    const mappedMatches = docsToUpsert.map((riotMatch) => toPlayedMatchFromRiotMatch(riotMatch, userPuuid, itemLookup));
 
     let synced = 0;
     await Promise.all(
-      docsToUpsert.map(async (payload) => {
+      mappedMatches.map(async (payload) => {
         const update = { ...payload, userId };
         const result = await PlayedMatch.updateOne(
           { userId, matchId: payload.matchId },
