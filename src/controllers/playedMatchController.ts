@@ -179,3 +179,53 @@ export async function getPlayedMatches(req: Request, res: Response) {
     return res.status(500).json({ error: error?.message || 'Failed to load played matches' });
   }
 }
+
+export async function createCustomPlayedMatch(req: Request, res: Response) {
+  try {
+    const userId = (req as any).userId;
+    if (!userId) return res.status(401).json({ error: 'Unauthorized' });
+
+    const {
+      matchId,
+      myTeamId = null,
+      didWin = null,
+      gameMode,
+      queue = null,
+      durationSeconds,
+      startedAt = null,
+      endedAt = null,
+      winnerTeamId,
+      teams,
+    } = req.body || {};
+
+    if (!gameMode || !winnerTeamId || !Array.isArray(teams)) {
+      return res.status(400).json({ error: 'gameMode, winnerTeamId, and teams are required.' });
+    }
+
+    if (!Number.isFinite(Number(durationSeconds)) || Number(durationSeconds) < 0) {
+      return res.status(400).json({ error: 'durationSeconds must be a non-negative number.' });
+    }
+
+    const created = await PlayedMatch.create({
+      matchId: normalizeString(matchId) || `custom-${randomUUID()}`,
+      userId,
+      myTeamId: myTeamId == null ? null : String(myTeamId),
+      didWin: typeof didWin === 'boolean' ? didWin : null,
+      source: 'manual',
+      gameMode: String(gameMode),
+      queue: queue == null ? null : String(queue),
+      durationSeconds: Math.floor(Number(durationSeconds)),
+      startedAt: startedAt ? new Date(startedAt) : null,
+      endedAt: endedAt ? new Date(endedAt) : null,
+      winnerTeamId: String(winnerTeamId),
+      teams,
+    });
+
+    return res.status(201).json({ match: created.toObject() });
+  } catch (error: any) {
+    if (error?.code === 11000) {
+      return res.status(409).json({ error: 'A match with this matchId already exists for this user.' });
+    }
+    return res.status(400).json({ error: error?.message || 'Failed to create custom match' });
+  }
+}
