@@ -1,0 +1,694 @@
+{
+  "sourceUrl": "https://www.metasrc.com/lol/mayhem",
+  "scrapedAt": "2026-05-28T10:04:15.601Z",
+  "champions": [
+    {
+      "name": "Aatrox",
+      "href": "https://www.metasrc.com/lol/mayhem/build/aatrox"
+    },
+    {
+      "name": "Ahri",
+      "href": "https://www.metasrc.com/lol/mayhem/build/ahri"
+    },
+    {
+      "name": "Akali",
+      "href": "https://www.metasrc.com/lol/mayhem/build/akali"
+    },
+    {
+      "name": "Akshan",
+      "href": "https://www.metasrc.com/lol/mayhem/build/akshan"
+    },
+    {
+      "name": "Alistar",
+      "href": "https://www.metasrc.com/lol/mayhem/build/alistar"
+    },
+    {
+      "name": "Ambessa",
+      "href": "https://www.metasrc.com/lol/mayhem/build/ambessa"
+    },
+    {
+      "name": "Amumu",
+      "href": "https://www.metasrc.com/lol/mayhem/build/amumu"
+    },
+    {
+      "name": "Anivia",
+      "href": "https://www.metasrc.com/lol/mayhem/build/anivia"
+    },
+    {
+      "name": "Annie",
+      "href": "https://www.metasrc.com/lol/mayhem/build/annie"
+    },
+    {
+      "name": "Aphelios",
+      "href": "https://www.metasrc.com/lol/mayhem/build/aphelios"
+    },
+    {
+      "name": "Ashe",
+      "href": "https://www.metasrc.com/lol/mayhem/build/ashe"
+    },
+    {
+      "name": "Aurelion Sol",
+      "href": "https://www.metasrc.com/lol/mayhem/build/aurelion-sol"
+    },
+    {
+      "name": "Aurora",
+      "href": "https://www.metasrc.com/lol/mayhem/build/aurora"
+    },
+    {
+      "name": "Azir",
+      "href": "https://www.metasrc.com/lol/mayhem/build/azir"
+    },
+    {
+      "name": "Bard",
+      "href": "https://www.metasrc.com/lol/mayhem/build/bard"
+    },
+    {
+      "name": "Bel'Veth",
+      "href": "https://www.metasrc.com/lol/mayhem/build/belveth"
+    },
+    {
+      "name": "Blitzcrank",
+      "href": "https://www.metasrc.com/lol/mayhem/build/blitzcrank"
+    },
+    {
+      "name": "Brand",
+      "href": "https://www.metasrc.com/lol/mayhem/build/brand"
+    },
+    {
+      "name": "Braum",
+      "href": "https://www.metasrc.com/lol/mayhem/build/braum"
+    },
+    {
+      "name": "Briar",
+      "href": "https://www.metasrc.com/lol/mayhem/build/briar"
+    },
+    {
+      "name": "Caitlyn",
+      "href": "https://www.metasrc.com/lol/mayhem/build/caitlyn"
+    },
+    {
+      "name": "Camille",
+      "href": "https://www.metasrc.com/lol/mayhem/build/camille"
+    },
+    {
+      "name": "Cassiopeia",
+      "href": "https://www.metasrc.com/lol/mayhem/build/cassiopeia"
+    },
+    {
+      "name": "Cho'Gath",
+      "href": "https://www.metasrc.com/lol/mayhem/build/chogath"
+    },
+    {
+      "name": "Corki",
+      "href": "https://www.metasrc.com/lol/mayhem/build/corki"
+    },
+    {
+      "name": "Darius",
+      "href": "https://www.metasrc.com/lol/mayhem/build/darius"
+    },
+    {
+      "name": "Diana",
+      "href": "https://www.metasrc.com/lol/mayhem/build/diana"
+    },
+    {
+      "name": "Dr. Mundo",
+      "href": "https://www.metasrc.com/lol/mayhem/build/dr-mundo"
+    },
+    {
+      "name": "Draven",
+      "href": "https://www.metasrc.com/lol/mayhem/build/draven"
+    },
+    {
+      "name": "Ekko",
+      "href": "https://www.metasrc.com/lol/mayhem/build/ekko"
+    },
+    {
+      "name": "Elise",
+      "href": "https://www.metasrc.com/lol/mayhem/build/elise"
+    },
+    {
+      "name": "Evelynn",
+      "href": "https://www.metasrc.com/lol/mayhem/build/evelynn"
+    },
+    {
+      "name": "Ezreal",
+      "href": "https://www.metasrc.com/lol/mayhem/build/ezreal"
+    },
+    {
+      "name": "Fiddlesticks",
+      "href": "https://www.metasrc.com/lol/mayhem/build/fiddlesticks"
+    },
+    {
+      "name": "Fiora",
+      "href": "https://www.metasrc.com/lol/mayhem/build/fiora"
+    },
+    {
+      "name": "Fizz",
+      "href": "https://www.metasrc.com/lol/mayhem/build/fizz"
+    },
+    {
+      "name": "Galio",
+      "href": "https://www.metasrc.com/lol/mayhem/build/galio"
+    },
+    {
+      "name": "Gangplank",
+      "href": "https://www.metasrc.com/lol/mayhem/build/gangplank"
+    },
+    {
+      "name": "Garen",
+      "href": "https://www.metasrc.com/lol/mayhem/build/garen"
+    },
+    {
+      "name": "Gnar",
+      "href": "https://www.metasrc.com/lol/mayhem/build/gnar"
+    },
+    {
+      "name": "Gragas",
+      "href": "https://www.metasrc.com/lol/mayhem/build/gragas"
+    },
+    {
+      "name": "Graves",
+      "href": "https://www.metasrc.com/lol/mayhem/build/graves"
+    },
+    {
+      "name": "Gwen",
+      "href": "https://www.metasrc.com/lol/mayhem/build/gwen"
+    },
+    {
+      "name": "Hecarim",
+      "href": "https://www.metasrc.com/lol/mayhem/build/hecarim"
+    },
+    {
+      "name": "Heimerdinger",
+      "href": "https://www.metasrc.com/lol/mayhem/build/heimerdinger"
+    },
+    {
+      "name": "Hwei",
+      "href": "https://www.metasrc.com/lol/mayhem/build/hwei"
+    },
+    {
+      "name": "Illaoi",
+      "href": "https://www.metasrc.com/lol/mayhem/build/illaoi"
+    },
+    {
+      "name": "Irelia",
+      "href": "https://www.metasrc.com/lol/mayhem/build/irelia"
+    },
+    {
+      "name": "Ivern",
+      "href": "https://www.metasrc.com/lol/mayhem/build/ivern"
+    },
+    {
+      "name": "Janna",
+      "href": "https://www.metasrc.com/lol/mayhem/build/janna"
+    },
+    {
+      "name": "Jarvan IV",
+      "href": "https://www.metasrc.com/lol/mayhem/build/jarvan"
+    },
+    {
+      "name": "Jax",
+      "href": "https://www.metasrc.com/lol/mayhem/build/jax"
+    },
+    {
+      "name": "Jayce",
+      "href": "https://www.metasrc.com/lol/mayhem/build/jayce"
+    },
+    {
+      "name": "Jhin",
+      "href": "https://www.metasrc.com/lol/mayhem/build/jhin"
+    },
+    {
+      "name": "Jinx",
+      "href": "https://www.metasrc.com/lol/mayhem/build/jinx"
+    },
+    {
+      "name": "K'Sante",
+      "href": "https://www.metasrc.com/lol/mayhem/build/ksante"
+    },
+    {
+      "name": "Kai'Sa",
+      "href": "https://www.metasrc.com/lol/mayhem/build/kaisa"
+    },
+    {
+      "name": "Kalista",
+      "href": "https://www.metasrc.com/lol/mayhem/build/kalista"
+    },
+    {
+      "name": "Karma",
+      "href": "https://www.metasrc.com/lol/mayhem/build/karma"
+    },
+    {
+      "name": "Karthus",
+      "href": "https://www.metasrc.com/lol/mayhem/build/karthus"
+    },
+    {
+      "name": "Kassadin",
+      "href": "https://www.metasrc.com/lol/mayhem/build/kassadin"
+    },
+    {
+      "name": "Katarina",
+      "href": "https://www.metasrc.com/lol/mayhem/build/katarina"
+    },
+    {
+      "name": "Kayle",
+      "href": "https://www.metasrc.com/lol/mayhem/build/kayle"
+    },
+    {
+      "name": "Kayn",
+      "href": "https://www.metasrc.com/lol/mayhem/build/kayn"
+    },
+    {
+      "name": "Kennen",
+      "href": "https://www.metasrc.com/lol/mayhem/build/kennen"
+    },
+    {
+      "name": "Kha'Zix",
+      "href": "https://www.metasrc.com/lol/mayhem/build/khazix"
+    },
+    {
+      "name": "Kindred",
+      "href": "https://www.metasrc.com/lol/mayhem/build/kindred"
+    },
+    {
+      "name": "Kled",
+      "href": "https://www.metasrc.com/lol/mayhem/build/kled"
+    },
+    {
+      "name": "Kog'Maw",
+      "href": "https://www.metasrc.com/lol/mayhem/build/kogmaw"
+    },
+    {
+      "name": "LeBlanc",
+      "href": "https://www.metasrc.com/lol/mayhem/build/leblanc"
+    },
+    {
+      "name": "Lee Sin",
+      "href": "https://www.metasrc.com/lol/mayhem/build/lee-sin"
+    },
+    {
+      "name": "Leona",
+      "href": "https://www.metasrc.com/lol/mayhem/build/leona"
+    },
+    {
+      "name": "Lillia",
+      "href": "https://www.metasrc.com/lol/mayhem/build/lillia"
+    },
+    {
+      "name": "Lissandra",
+      "href": "https://www.metasrc.com/lol/mayhem/build/lissandra"
+    },
+    {
+      "name": "Lucian",
+      "href": "https://www.metasrc.com/lol/mayhem/build/lucian"
+    },
+    {
+      "name": "Lulu",
+      "href": "https://www.metasrc.com/lol/mayhem/build/lulu"
+    },
+    {
+      "name": "Lux",
+      "href": "https://www.metasrc.com/lol/mayhem/build/lux"
+    },
+    {
+      "name": "Malphite",
+      "href": "https://www.metasrc.com/lol/mayhem/build/malphite"
+    },
+    {
+      "name": "Malzahar",
+      "href": "https://www.metasrc.com/lol/mayhem/build/malzahar"
+    },
+    {
+      "name": "Maokai",
+      "href": "https://www.metasrc.com/lol/mayhem/build/maokai"
+    },
+    {
+      "name": "Master Yi",
+      "href": "https://www.metasrc.com/lol/mayhem/build/master-yi"
+    },
+    {
+      "name": "Mel",
+      "href": "https://www.metasrc.com/lol/mayhem/build/mel"
+    },
+    {
+      "name": "Milio",
+      "href": "https://www.metasrc.com/lol/mayhem/build/milio"
+    },
+    {
+      "name": "Miss Fortune",
+      "href": "https://www.metasrc.com/lol/mayhem/build/miss-fortune"
+    },
+    {
+      "name": "Mordekaiser",
+      "href": "https://www.metasrc.com/lol/mayhem/build/mordekaiser"
+    },
+    {
+      "name": "Morgana",
+      "href": "https://www.metasrc.com/lol/mayhem/build/morgana"
+    },
+    {
+      "name": "Naafiri",
+      "href": "https://www.metasrc.com/lol/mayhem/build/naafiri"
+    },
+    {
+      "name": "Nami",
+      "href": "https://www.metasrc.com/lol/mayhem/build/nami"
+    },
+    {
+      "name": "Nasus",
+      "href": "https://www.metasrc.com/lol/mayhem/build/nasus"
+    },
+    {
+      "name": "Nautilus",
+      "href": "https://www.metasrc.com/lol/mayhem/build/nautilus"
+    },
+    {
+      "name": "Neeko",
+      "href": "https://www.metasrc.com/lol/mayhem/build/neeko"
+    },
+    {
+      "name": "Nidalee",
+      "href": "https://www.metasrc.com/lol/mayhem/build/nidalee"
+    },
+    {
+      "name": "Nilah",
+      "href": "https://www.metasrc.com/lol/mayhem/build/nilah"
+    },
+    {
+      "name": "Nocturne",
+      "href": "https://www.metasrc.com/lol/mayhem/build/nocturne"
+    },
+    {
+      "name": "Nunu & Willump",
+      "href": "https://www.metasrc.com/lol/mayhem/build/nunu"
+    },
+    {
+      "name": "Olaf",
+      "href": "https://www.metasrc.com/lol/mayhem/build/olaf"
+    },
+    {
+      "name": "Orianna",
+      "href": "https://www.metasrc.com/lol/mayhem/build/orianna"
+    },
+    {
+      "name": "Ornn",
+      "href": "https://www.metasrc.com/lol/mayhem/build/ornn"
+    },
+    {
+      "name": "Pantheon",
+      "href": "https://www.metasrc.com/lol/mayhem/build/pantheon"
+    },
+    {
+      "name": "Poppy",
+      "href": "https://www.metasrc.com/lol/mayhem/build/poppy"
+    },
+    {
+      "name": "Pyke",
+      "href": "https://www.metasrc.com/lol/mayhem/build/pyke"
+    },
+    {
+      "name": "Qiyana",
+      "href": "https://www.metasrc.com/lol/mayhem/build/qiyana"
+    },
+    {
+      "name": "Quinn",
+      "href": "https://www.metasrc.com/lol/mayhem/build/quinn"
+    },
+    {
+      "name": "Rakan",
+      "href": "https://www.metasrc.com/lol/mayhem/build/rakan"
+    },
+    {
+      "name": "Rammus",
+      "href": "https://www.metasrc.com/lol/mayhem/build/rammus"
+    },
+    {
+      "name": "Rek'Sai",
+      "href": "https://www.metasrc.com/lol/mayhem/build/reksai"
+    },
+    {
+      "name": "Rell",
+      "href": "https://www.metasrc.com/lol/mayhem/build/rell"
+    },
+    {
+      "name": "Renata Glasc",
+      "href": "https://www.metasrc.com/lol/mayhem/build/renata-glasc"
+    },
+    {
+      "name": "Renekton",
+      "href": "https://www.metasrc.com/lol/mayhem/build/renekton"
+    },
+    {
+      "name": "Rengar",
+      "href": "https://www.metasrc.com/lol/mayhem/build/rengar"
+    },
+    {
+      "name": "Riven",
+      "href": "https://www.metasrc.com/lol/mayhem/build/riven"
+    },
+    {
+      "name": "Rumble",
+      "href": "https://www.metasrc.com/lol/mayhem/build/rumble"
+    },
+    {
+      "name": "Ryze",
+      "href": "https://www.metasrc.com/lol/mayhem/build/ryze"
+    },
+    {
+      "name": "Samira",
+      "href": "https://www.metasrc.com/lol/mayhem/build/samira"
+    },
+    {
+      "name": "Sejuani",
+      "href": "https://www.metasrc.com/lol/mayhem/build/sejuani"
+    },
+    {
+      "name": "Senna",
+      "href": "https://www.metasrc.com/lol/mayhem/build/senna"
+    },
+    {
+      "name": "Seraphine",
+      "href": "https://www.metasrc.com/lol/mayhem/build/seraphine"
+    },
+    {
+      "name": "Sett",
+      "href": "https://www.metasrc.com/lol/mayhem/build/sett"
+    },
+    {
+      "name": "Shaco",
+      "href": "https://www.metasrc.com/lol/mayhem/build/shaco"
+    },
+    {
+      "name": "Shen",
+      "href": "https://www.metasrc.com/lol/mayhem/build/shen"
+    },
+    {
+      "name": "Shyvana",
+      "href": "https://www.metasrc.com/lol/mayhem/build/shyvana"
+    },
+    {
+      "name": "Singed",
+      "href": "https://www.metasrc.com/lol/mayhem/build/singed"
+    },
+    {
+      "name": "Sion",
+      "href": "https://www.metasrc.com/lol/mayhem/build/sion"
+    },
+    {
+      "name": "Sivir",
+      "href": "https://www.metasrc.com/lol/mayhem/build/sivir"
+    },
+    {
+      "name": "Skarner",
+      "href": "https://www.metasrc.com/lol/mayhem/build/skarner"
+    },
+    {
+      "name": "Smolder",
+      "href": "https://www.metasrc.com/lol/mayhem/build/smolder"
+    },
+    {
+      "name": "Sona",
+      "href": "https://www.metasrc.com/lol/mayhem/build/sona"
+    },
+    {
+      "name": "Soraka",
+      "href": "https://www.metasrc.com/lol/mayhem/build/soraka"
+    },
+    {
+      "name": "Swain",
+      "href": "https://www.metasrc.com/lol/mayhem/build/swain"
+    },
+    {
+      "name": "Sylas",
+      "href": "https://www.metasrc.com/lol/mayhem/build/sylas"
+    },
+    {
+      "name": "Syndra",
+      "href": "https://www.metasrc.com/lol/mayhem/build/syndra"
+    },
+    {
+      "name": "Tahm Kench",
+      "href": "https://www.metasrc.com/lol/mayhem/build/tahm-kench"
+    },
+    {
+      "name": "Taliyah",
+      "href": "https://www.metasrc.com/lol/mayhem/build/taliyah"
+    },
+    {
+      "name": "Talon",
+      "href": "https://www.metasrc.com/lol/mayhem/build/talon"
+    },
+    {
+      "name": "Taric",
+      "href": "https://www.metasrc.com/lol/mayhem/build/taric"
+    },
+    {
+      "name": "Teemo",
+      "href": "https://www.metasrc.com/lol/mayhem/build/teemo"
+    },
+    {
+      "name": "Thresh",
+      "href": "https://www.metasrc.com/lol/mayhem/build/thresh"
+    },
+    {
+      "name": "Tristana",
+      "href": "https://www.metasrc.com/lol/mayhem/build/tristana"
+    },
+    {
+      "name": "Trundle",
+      "href": "https://www.metasrc.com/lol/mayhem/build/trundle"
+    },
+    {
+      "name": "Tryndamere",
+      "href": "https://www.metasrc.com/lol/mayhem/build/tryndamere"
+    },
+    {
+      "name": "Twisted Fate",
+      "href": "https://www.metasrc.com/lol/mayhem/build/twisted-fate"
+    },
+    {
+      "name": "Twitch",
+      "href": "https://www.metasrc.com/lol/mayhem/build/twitch"
+    },
+    {
+      "name": "Udyr",
+      "href": "https://www.metasrc.com/lol/mayhem/build/udyr"
+    },
+    {
+      "name": "Urgot",
+      "href": "https://www.metasrc.com/lol/mayhem/build/urgot"
+    },
+    {
+      "name": "Varus",
+      "href": "https://www.metasrc.com/lol/mayhem/build/varus"
+    },
+    {
+      "name": "Vayne",
+      "href": "https://www.metasrc.com/lol/mayhem/build/vayne"
+    },
+    {
+      "name": "Veigar",
+      "href": "https://www.metasrc.com/lol/mayhem/build/veigar"
+    },
+    {
+      "name": "Vel'Koz",
+      "href": "https://www.metasrc.com/lol/mayhem/build/velkoz"
+    },
+    {
+      "name": "Vex",
+      "href": "https://www.metasrc.com/lol/mayhem/build/vex"
+    },
+    {
+      "name": "Vi",
+      "href": "https://www.metasrc.com/lol/mayhem/build/vi"
+    },
+    {
+      "name": "Viego",
+      "href": "https://www.metasrc.com/lol/mayhem/build/viego"
+    },
+    {
+      "name": "Viktor",
+      "href": "https://www.metasrc.com/lol/mayhem/build/viktor"
+    },
+    {
+      "name": "Vladimir",
+      "href": "https://www.metasrc.com/lol/mayhem/build/vladimir"
+    },
+    {
+      "name": "Volibear",
+      "href": "https://www.metasrc.com/lol/mayhem/build/volibear"
+    },
+    {
+      "name": "Warwick",
+      "href": "https://www.metasrc.com/lol/mayhem/build/warwick"
+    },
+    {
+      "name": "Wukong",
+      "href": "https://www.metasrc.com/lol/mayhem/build/wukong"
+    },
+    {
+      "name": "Xayah",
+      "href": "https://www.metasrc.com/lol/mayhem/build/xayah"
+    },
+    {
+      "name": "Xerath",
+      "href": "https://www.metasrc.com/lol/mayhem/build/xerath"
+    },
+    {
+      "name": "Xin Zhao",
+      "href": "https://www.metasrc.com/lol/mayhem/build/xin-zhao"
+    },
+    {
+      "name": "Yasuo",
+      "href": "https://www.metasrc.com/lol/mayhem/build/yasuo"
+    },
+    {
+      "name": "Yone",
+      "href": "https://www.metasrc.com/lol/mayhem/build/yone"
+    },
+    {
+      "name": "Yorick",
+      "href": "https://www.metasrc.com/lol/mayhem/build/yorick"
+    },
+    {
+      "name": "Yunara",
+      "href": "https://www.metasrc.com/lol/mayhem/build/yunara"
+    },
+    {
+      "name": "Yuumi",
+      "href": "https://www.metasrc.com/lol/mayhem/build/yuumi"
+    },
+    {
+      "name": "Zaahen",
+      "href": "https://www.metasrc.com/lol/mayhem/build/zaahen"
+    },
+    {
+      "name": "Zac",
+      "href": "https://www.metasrc.com/lol/mayhem/build/zac"
+    },
+    {
+      "name": "Zed",
+      "href": "https://www.metasrc.com/lol/mayhem/build/zed"
+    },
+    {
+      "name": "Zeri",
+      "href": "https://www.metasrc.com/lol/mayhem/build/zeri"
+    },
+    {
+      "name": "Ziggs",
+      "href": "https://www.metasrc.com/lol/mayhem/build/ziggs"
+    },
+    {
+      "name": "Zilean",
+      "href": "https://www.metasrc.com/lol/mayhem/build/zilean"
+    },
+    {
+      "name": "Zoe",
+      "href": "https://www.metasrc.com/lol/mayhem/build/zoe"
+    },
+    {
+      "name": "Zyra",
+      "href": "https://www.metasrc.com/lol/mayhem/build/zyra"
+    }
+  ]
+}

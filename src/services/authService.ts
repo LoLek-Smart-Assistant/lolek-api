@@ -36,6 +36,10 @@ export async function logout(userId: string) {
     await User.updateOne({ _id: userId }, { refreshToken: null });
 }
 
+export async function getUserById(userId: string) {
+    return User.findById(userId);
+}
+
 export async function getUserProfile(userId: string) {
     return User.findById(userId).select('-password -refreshToken');
 }
@@ -44,6 +48,19 @@ export async function updateUserRiotProfile(userId: string, riotName: string, ri
     return User.findByIdAndUpdate(
         userId,
         { riotName, riotTag, puuid, platform },
-        { new: true }
+        { returnDocument: 'after' }
     ).select('-password -refreshToken');
+}
+
+export async function removeUserRiotProfile(userId: string) {
+    return User.findByIdAndUpdate(
+        userId,
+        { $unset: { riotName: 1, riotTag: 1, puuid: 1, platform: 1 } },
+        { returnDocument: 'after' }
+    ).select('-password -refreshToken');
+}
+
+export async function deleteUser(userId: string) {
+    const res = await User.findByIdAndDelete(userId);
+    return res;
 }

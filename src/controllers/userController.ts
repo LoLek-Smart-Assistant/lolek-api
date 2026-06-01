@@ -1,6 +1,9 @@
+import { normalizePlatformCode } from '../lib/riotClient';
 import { Request, Response } from 'express';
 import { getUserProfile, updateUserRiotProfile } from '../services/authService';
 import riot from '../lib/riotClient';
+import { removeUserRiotProfile, deleteUser as deleteUserService } from '../services/authService';
+import { platformToRegion } from '../services/liveGameSummary';
 
 export async function getProfile(req: Request, res: Response) {
     try {
@@ -59,13 +62,18 @@ export async function linkRiotProfile(req: Request, res: Response) {
         const userId = (req as any).userId;
         if (!userId) return res.status(401).json({ error: 'Unauthorized' });
 
-        const { riotName, riotTag, platform } = req.body;
+        const riotName = typeof req.body.riotName === 'string' ? req.body.riotName.trim() : '';
+        const riotTag = typeof req.body.riotTag === 'string' ? req.body.riotTag.trim() : '';
+        const platform = typeof req.body.platform === 'string' ? req.body.platform.trim() : '';
         if (!riotName || !riotTag || !platform) {
             return res.status(400).json({ error: 'riotName, riotTag, and platform are required.' });
         }
 
-        const account = await riot.getAccount(riotName, riotTag);
-        const updated = await updateUserRiotProfile(userId, riotName, riotTag, account.puuid, platform);
+        const normalizedPlatform = normalizePlatformCode(platform);
+        const region = platformToRegion(normalizedPlatform);
+
+        const account = await riot.getAccount(riotName, riotTag, region);
+        const updated = await updateUserRiotProfile(userId, riotName, riotTag, account.puuid, normalizedPlatform);
 
         if (!updated) {
             return res.status(404).json({ error: 'User not found' });
@@ -76,5 +84,34 @@ export async function linkRiotProfile(req: Request, res: Response) {
         res.json({ message: 'Riot profile linked.', user: updatedPlain });
     } catch (err: any) {
         res.status(400).json({ error: err.message });
+    }
+}
+
+export async function removeRiotProfile(req: Request, res: Response) {
+    try {
+        const userId = (req as any).userId;
+        if (!userId) return res.status(401).json({ error: 'Unauthorized' });
+
+        const updated = await removeUserRiotProfile(userId);
+        if (!updated) return res.status(404).json({ error: 'User not found' });
+
+        const updatedPlain = typeof updated.toObject === 'function' ? updated.toObject() : updated;
+        res.json({ message: 'Riot profile removed.', user: updatedPlain });
+    } catch (err: any) {
+        res.status(500).json({ error: err.message });
+    }
+}
+
+export async function deleteUser(req: Request, res: Response) {
+    try {
+        const userId = (req as any).userId;
+        if (!userId) return res.status(401).json({ error: 'Unauthorized' });
+
+        const removed = await deleteUserService(userId);
+        if (!removed) return res.status(404).json({ error: 'User not found' });
+
+        res.json({ message: 'User deleted.' });
+    } catch (err: any) {
+        res.status(500).json({ error: err.message });
     }
 }

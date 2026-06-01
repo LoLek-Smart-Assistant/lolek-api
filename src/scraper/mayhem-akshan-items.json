@@ -1,0 +1,78 @@
+{
+  "champion": "akshan",
+  "sourceUrl": "https://www.metasrc.com/lol/mayhem/build/akshan",
+  "scrapedAt": "2026-05-28T11:11:27.266Z",
+  "coreItems": [
+    {
+      "itemId": 3006,
+      "slot": 1
+    },
+    {
+      "itemId": 3031,
+      "slot": 2
+    },
+    {
+      "itemId": 6676,
+      "slot": 3
+    },
+    {
+      "itemId": 2140,
+      "slot": 4
+    },
+    {
+      "itemId": 3036,
+      "slot": 5
+    },
+    {
+      "itemId": 3094,
+      "slot": 6
+    },
+    {
+      "itemId": 3153,
+      "slot": 7
+    }
+  ],
+  "slotOptionItems": [
+    {
+      "itemId": 3036,
+      "slot": 4
+    },
+    {
+      "itemId": 3094,
+      "slot": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "itemId": 3153,
+      "slot": [
+        4,
+        5
+      ]
+    },
+    {
+      "itemId": 6672,
+      "slot": [
+        4,
+        6
+      ]
+    },
+    {
+      "itemId": 3033,
+      "slot": 5
+    },
+    {
+      "itemId": 3072,
+      "slot": [
+        5,
+        6
+      ]
+    },
+    {
+      "itemId": 6673,
+      "slot": 6
+    }
+  ]
+}
