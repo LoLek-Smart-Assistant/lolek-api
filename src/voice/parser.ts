@@ -14,7 +14,9 @@ const recommendationPatterns = [
 ];
 
 const enemyBuildPatterns = [
+  /\b\w+\s+build\b/i,
   /\b\w+\s+built\b/i,
+  /\b\w+\s+buy\b/i,
   /\b\w+\s+has\s+/i,
   /\b\w+\s+got\s+/i,
   /\b\w+\s+with\s+/i,
@@ -47,13 +49,18 @@ function detectIntent(transcript: string): VoiceIntent {
 
 function stripIntentWords(transcript: string): string {
   return transcript
-    .replace(/\b(?:built|buys|bought|has|have|got|gotten|with|remove|removed|sell|sold|undo)\b/gi, ' ')
+    .replace(/\b(?:build|built|buy|buys|bought|has|have|got|gotten|with|remove|removed|sell|sold|undo)\b/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
 
 function extractItemSection(transcript: string): string {
-  const match = transcript.match(/\b(?:built|buys|bought|has|have|got|with|remove|removed|sell|sold|undo)\b(.*)$/i);
+  const buildMatch = transcript.match(/\bbuild\b(.*)$/i);
+  if (buildMatch?.[1]) {
+    return buildMatch[1].trim();
+  }
+
+  const match = transcript.match(/\b(?:buy|buys|bought|built|has|have|got|with|remove|removed|sell|sold|undo)\b(.*)$/i);
   if (!match) {
     return transcript;
   }
@@ -62,7 +69,7 @@ function extractItemSection(transcript: string): string {
 }
 
 function extractChampionGuess(transcript: string): string {
-  const match = transcript.match(/^(.*?)\b(?:built|buys|bought|has|have|got|with|remove|removed|sell|sold|undo)\b/i);
+  const match = transcript.match(/^(.*?)\b(?:build|built|buy|buys|bought|has|have|got|with|remove|removed|sell|sold|undo)\b/i);
   if (match?.[1]) {
     return match[1].trim();
   }

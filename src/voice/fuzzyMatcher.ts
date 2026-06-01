@@ -25,13 +25,24 @@ function buildTokenWindows(text: string, maxWindowSize = 4): string[] {
   const tokens = normalizeForMatch(text).split(' ').filter(Boolean);
   const windows: string[] = [];
 
-  for (let size = 1; size <= Math.min(maxWindowSize, tokens.length); size += 1) {
+  for (let size = Math.min(maxWindowSize, tokens.length); size >= 1; size -= 1) {
     for (let start = 0; start <= tokens.length - size; start += 1) {
       windows.push(tokens.slice(start, start + size).join(' '));
     }
   }
 
   return windows;
+}
+
+function thresholdForQuery(normalizedQuery: string): number {
+  const compact = normalizedQuery.replace(/\s+/g, '');
+  if (compact.length <= 3) {
+    return 0.12;
+  }
+  if (compact.length <= 5) {
+    return 0.22;
+  }
+  return 0.35;
 }
 
 export function createFuzzyMatcher(candidates: string[]) {
@@ -54,6 +65,7 @@ export function createFuzzyMatcher(candidates: string[]) {
     if (!normalizedQuery) {
       return undefined;
     }
+    const threshold = thresholdForQuery(normalizedQuery);
 
     const exactMatch = normalizedCandidates.find((candidate) => candidate.normalized === normalizedQuery);
     if (exactMatch) {
@@ -61,7 +73,7 @@ export function createFuzzyMatcher(candidates: string[]) {
     }
 
     const result = fuse.search(normalizedQuery)[0];
-    if (!result || (result.score ?? 1) > 0.35) {
+    if (!result || (result.score ?? 1) > threshold) {
       return undefined;
     }
 
@@ -72,6 +84,10 @@ export function createFuzzyMatcher(candidates: string[]) {
     const windows = buildTokenWindows(text);
 
     for (const window of windows) {
+      const isSingleWord = !window.includes(' ');
+      if (isSingleWord && window.length < 3) {
+        continue;
+      }
       const match = matchSingle(window);
       if (match) {
         return match;
