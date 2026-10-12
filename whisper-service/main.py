@@ -16,6 +16,11 @@ app = FastAPI(title='LoL Whisper Service')
 _model: WhisperModel | None = None
 
 
+@app.get('/health')
+def health() -> dict[str, bool]:
+    return {'ok': True}
+
+
 def _cuda_available() -> bool:
     """Return True if PyTorch reports a usable CUDA device.
 
@@ -38,19 +43,20 @@ def get_model() -> WhisperModel:
 
     # Allow forcing CPU via environment for machines without proper CUDA
     force_cpu = os.environ.get('FORCE_CPU', '0') in ('1', 'true', 'True')
+    model_name = os.environ.get('WHISPER_MODEL', 'tiny.en')
 
     use_cuda = not force_cpu and _cuda_available()
 
     if use_cuda:
         logging.info('Initializing WhisperModel on CUDA (float16)')
         try:
-            _model = WhisperModel('small.en', device='cuda', compute_type='float16')
+            _model = WhisperModel(model_name, device='cuda', compute_type='float16')
             return _model
         except Exception:
             logging.exception('Failed to initialize CUDA model, falling back to CPU')
 
     logging.info('Initializing WhisperModel on CPU (int8)')
-    _model = WhisperModel('small.en', device='cpu', compute_type='int8')
+    _model = WhisperModel(model_name, device='cpu', compute_type='int8')
     return _model
 
 

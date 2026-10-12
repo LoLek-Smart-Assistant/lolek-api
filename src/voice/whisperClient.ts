@@ -39,8 +39,15 @@ export async function transcribeWithWhisper(audioFilePath: string): Promise<stri
     // Normalize axios connection errors to a 503 so callers can return a useful client response
     if (axios.isAxiosError(err)) {
       const code = err.code;
-      const status = err.response?.status || (code === 'ECONNREFUSED' ? 503 : 502);
-      const message = `Whisper service error: ${code || err.message}`;
+      const upstreamStatus = err.response?.status;
+      console.error('[whisper] upstream request failed', {
+        code,
+        status: upstreamStatus,
+      });
+      const status = upstreamStatus ? 502 : (code === 'ECONNREFUSED' ? 503 : 502);
+      const message = upstreamStatus
+        ? `Whisper service returned HTTP ${upstreamStatus}`
+        : `Whisper service error: ${code || err.message}`;
       const e: any = new Error(message);
       e.status = status;
       throw e;
