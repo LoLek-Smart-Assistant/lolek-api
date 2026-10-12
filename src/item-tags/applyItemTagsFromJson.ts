@@ -29,6 +29,8 @@
  *  - Existing `customTags` are replaced by mapping tags.
  */
 
+const PathToItemTags = ".\\src\\item-tags\\item-tags.json";
+
 import fs from 'fs';
 import path from 'path';
 import mongoose from 'mongoose';
@@ -81,7 +83,7 @@ function escapeRegExp(s: string) {
 }
 
 async function main() {
-    const filePath = path.resolve(__dirname, 'item-tags.json');
+    const filePath = path.join(process.cwd(), PathToItemTags);
 
     if (!fs.existsSync(filePath)) {
         console.error('Mapping file not found:', filePath);
