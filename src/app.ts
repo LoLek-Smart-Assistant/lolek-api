@@ -12,14 +12,30 @@ dotenv.config();
 
 const app = express();
 
-const allowedOrigins = (process.env.FRONTEND_URLS || process.env.FRONTEND_URL || 'http://localhost:5173')
+const configuredFrontendOrigins = process.env.FRONTEND_URLS || process.env.FRONTEND_URL;
+const allowedOrigins = (configuredFrontendOrigins || (process.env.NODE_ENV === 'production' ? '' : 'http://localhost:5173'))
   .split(',')
-  .map((origin) => origin.trim())
+  .map((origin) => {
+    const trimmedOrigin = origin.trim();
+    if (!trimmedOrigin) return '';
+    try {
+      return new URL(trimmedOrigin).origin;
+    } catch {
+      return trimmedOrigin.replace(/\/$/, '');
+    }
+  })
   .filter(Boolean);
 
 const corsOptions = {
   origin: (origin: string | undefined, callback: (error: Error | null, allowed?: boolean) => void) => {
-    callback(null, !origin || allowedOrigins.includes(origin));
+    if (!origin) return callback(null, true);
+    let requestOrigin = origin;
+    try {
+      requestOrigin = new URL(origin).origin;
+    } catch {
+      // Keep the provided origin for the allowlist comparison.
+    }
+    callback(null, allowedOrigins.includes(requestOrigin));
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
